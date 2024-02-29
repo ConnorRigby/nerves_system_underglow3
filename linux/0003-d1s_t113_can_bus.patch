@@ -206,3 +206,15 @@ diff -urN linux-6.0.2/include/dt-bindings/clock/sun20i-d1-ccu.h linux-6.0.2-can/
 +#define CLK_BUS_CAN1		146
  
  #endif /* _DT_BINDINGS_CLK_SUN20I_D1_CCU_H_ */
+diff --git a/include/dt-bindings/reset/sun20i-d1-ccu.h b/include/dt-bindings/reset/sun20i-d1-ccu.h
+index de9ff5203239..f8001cf50bf1 100644
+--- a/include/dt-bindings/reset/sun20i-d1-ccu.h
++++ b/include/dt-bindings/reset/sun20i-d1-ccu.h
+@@ -73,5 +73,7 @@ 
+ #define RST_BUS_DSP_CFG		63
+ #define RST_BUS_DSP_DBG		64
+ #define RST_BUS_RISCV_CFG	65
++#define RST_BUS_CAN0		66
++#define RST_BUS_CAN1		67
+ 
+ #endif /* _DT_BINDINGS_RST_SUN20I_D1_CCU_H_ */

@@ -8,7 +8,7 @@
 #include "sun8i-t113.dtsi"
 
 / {
-	model = "MangoPi MQ-Dual";
+	model = "ConeRGB Underglow3";
 	compatible = "allwinner,sun20i-d1", "allwinner,sun8i";
 
 	aliases {
@@ -17,7 +17,6 @@
 		serial0 = &uart0;
 		serial1 = &uart1;
 		serial3 = &uart3;
-		serial5 = &uart5;
 	};
 
 	chosen {
@@ -63,33 +62,6 @@
 		vin-supply = <&reg_vcc>;
 	};
 
-
-	dmic_codec: dmic-codec {
-		compatible = "dmic-codec";
-		num-channels = <2>;
-		#sound-dai-cells = <0>;
-	};
-
-	dmic-sound {
-		compatible = "simple-audio-card";
-		#address-cells = <1>;
-		#size-cells = <0>;
-
-		simple-audio-card,dai-link@0 {
-			format = "pdm";
-			frame-master = <&link0_cpu>;
-			bitclock-master = <&link0_cpu>;
-
-			link0_cpu: cpu {
-				sound-dai = <&dmic>;
-			};
-
-			link0_codec: codec {
-				sound-dai = <&dmic_codec>;
-			};
-		};
-	};
-
 	leds {
 		compatible = "gpio-leds";
 
@@ -111,15 +83,6 @@
 		pinctrl-0 = <&clk_pg11_pin>;
 		pinctrl-names = "default";
 	};
-
-	panel {
-		compatible = "bananapi,s070wv20-ct16", "simple-panel";
-		port {
-			panel_input: endpoint {
-				remote-endpoint = <&tcon_lcd0_out_panel>;
-			};
-		};
-	};
 };
 
 &reg_aldo {
@@ -140,59 +103,13 @@
 	status = "okay";
 };
 
-&de {
-	status = "okay";
-};
-
-&tcon_lcd0 {
-	pinctrl-names = "default";
-	pinctrl-0 = <&lcd_rgb666_pins>;
-	status = "okay";
-};
-
-&tcon_lcd0_out {
-	tcon_lcd0_out_panel: endpoint@0 {
-		reg = <0>;
-		remote-endpoint = <&panel_input>;
-	};
-};
-
-// &dsi {
-// 	pinctrl-0 = <&dsi_4lane_pins>;
-// 	pinctrl-names = "default";
-// 	status = "disabled";
-
-// 	panel: panel@0 {
-// 		reg = <0>;
-// 		compatible = "lg,lh500wx1-sd03";
-// 		pinctrl-names = "default";
-// /*
-// 		pinctrl-0 = <&panel_pin>;
-
-// 		port {
-// 				panel_in: endpoint {
-// 						remote-endpoint = <&dsi0_out>;
-// 				};
-// 		};
-// */
-// 	};
-// };
-
 &pio {
-
 	vcc-pb-supply = <&reg_vcc_3v3>;
 	vcc-pc-supply = <&reg_vcc_3v3>;
 	vcc-pd-supply = <&reg_vcc_3v3>;
 	vcc-pe-supply = <&reg_avdd2v8>;
 	vcc-pf-supply = <&reg_vcc_3v3>;
 	vcc-pg-supply = <&reg_vcc_3v3>;
-
-	can0_pins_a: can0_pins@0 {
-		pins = "PB2", "PB3";
-		function = "can0";
-		drive-strength = <10>;
-		bias-pull-up;
-	};
 
 	can1_pins_a: can1_pins@0 {
 		pins = "PB4", "PB5";
@@ -224,13 +141,6 @@
 	pinctrl-0 = <&uart1_pg6_pins>, <&uart1_pg8_rts_cts_pins>;
 	pinctrl-names = "default";
 	status = "okay";
-
-	bluetooth {
-		compatible = "realtek,rtl8723ds-bt";
-		device-wake-gpios = <&pio 6 13 GPIO_ACTIVE_HIGH>; /* PG13 */
-		enable-gpios = <&pio 6 15 GPIO_ACTIVE_HIGH>; /* PG15 */
-		host-wake-gpios = <&pio 6 14 GPIO_ACTIVE_HIGH>; /* PG14 */
-	};
 };
 
 &uart3 {
@@ -242,62 +152,19 @@
 &uart5 {
 	pinctrl-0 = <&uart5_pb4_pins>;
 	pinctrl-names = "default";
-	status = "okay";
+	status = "disabled";
 };
 
 &i2c2 {
 	pinctrl-0 = <&i2c2_pe12_pins>;
 	pinctrl-names = "default";
 	status = "okay";
-
-	gt911@5d {
-		compatible = "goodix,gt911";
-		reg = <0x5d>;
-		interrupt-parent = <&pio>;
-		interrupts = <1 3 IRQ_TYPE_EDGE_FALLING>;
-
-		irq-gpios = <&pio 1 3 GPIO_ACTIVE_HIGH>;
-		reset-gpios = <&pio 1 2 GPIO_ACTIVE_HIGH>;
-
-		VDD-supply = <&reg_vcc_3v3>;
-	};
 };
 
 &spi0 {
-        pinctrl-0 = <&spi0_pins>;
-        pinctrl-names = "default";
-        status = "okay";
-
-        flash@0 {
-                compatible = "spi-nand";
-                reg = <0>;
-
-                partitions {
-                        compatible = "fixed-partitions";
-                        #address-cells = <1>;
-                        #size-cells = <1>;
-
-                        partition@0 {
-                                label = "awboot";
-                                reg = <0x00000000 0x00020000>;	/* 128K */
-                        };
-
-                        partition@20000 {
-                                label = "dtb";
-                                reg = <0x00020000 0x00020000>;  /* 128k */
-                        };
-
-                        partition@40000 {
-                                label = "kernel";
-                                reg = <0x00040000 0x00800000>;  /* 8MB */
-                        };
-
-                        partition@840000 {
-                                label = "filesystem";
-                                reg = <0x00840000 0x0f7c0000>;
-                        };
-                };
-        };
+	pinctrl-0 = <&spi0_pins>;
+	pinctrl-names = "default";
+	status = "okay";
 };
 
 &mmc0 {
@@ -329,19 +196,6 @@
     };
 };
 
-&codec {
-	routing = "Headphone Jack", "HPOUTL",
-		  "Headphone Jack", "HPOUTR",
-		  "Headset Microphone", "MICIN3"; 
-
-/*		  "LINEINL", "HPOUTL",
-		  "LINEINR", "HPOUTR";
-*/
-	widgets = "Microphone", "Headset Microphone",
-		  "Headphone", "Headphone Jack";
-	status = "disabled";
-};
-
 &usb_otg {
 	dr_mode = "otg";
 	status = "okay";
@@ -349,10 +203,6 @@
 
 &ehci0 {
 	status = "disabled";
-};
-
-&dmic {
-	status = "okay";
 };
 
 &ehci1 {
@@ -380,31 +230,126 @@
 	status = "okay";
 };
 
-&mdio {
-	ext_rgmii_phy: ethernet-phy@1 {
-		compatible = "ethernet-phy-ieee802.3-c22";
-		reg = <1>;
+&can1 {
+	pinctrl-names = "default";
+	pinctrl-0 = <&can1_pins>;
+	status = "okay";
+};
+
+&ledc {
+	pinctrl-0 = <&ledc_pe5_pin>;
+	pinctrl-names = "default";
+	reg = <0x2008000 0x14>;
+	status = "okay";
+	allwinner,pixel-format = "grb";
+	allwinner,t0h-ns = "320";
+	allwinner,t0l-ns = "800";
+	allwinner,t1h-ns = "840";
+	allwinner,t1l-ns = "400";
+	allwinner,treset-ns = "300000";
+	multi-led@0 {
+		reg = <0x0>;
+		color = <LED_COLOR_ID_RGB>;
+		function = LED_FUNCTION_STATUS;
+	};
+	multi-led@1 {
+		reg = <0x1>;
+		color = <LED_COLOR_ID_RGB>;
+		function = LED_FUNCTION_STATUS;
+	};
+	multi-led@2 {
+		reg = <0x2>;
+		color = <LED_COLOR_ID_RGB>;
+		function = LED_FUNCTION_STATUS;
+	};
+	multi-led@3 {
+		reg = <0x3>;
+		color = <LED_COLOR_ID_RGB>;
+		function = LED_FUNCTION_STATUS;
+	};
+	multi-led@4 {
+		reg = <0x4>;
+		color = <LED_COLOR_ID_RGB>;
+		function = LED_FUNCTION_STATUS;
+	};
+	multi-led@5 {
+		reg = <0x5>;
+		color = <LED_COLOR_ID_RGB>;
+		function = LED_FUNCTION_STATUS;
+	};
+	multi-led@6 {
+		reg = <0x6>;
+		color = <LED_COLOR_ID_RGB>;
+		function = LED_FUNCTION_STATUS;
+	};
+	multi-led@7 {
+		reg = <0x7>;
+		color = <LED_COLOR_ID_RGB>;
+		function = LED_FUNCTION_STATUS;
+	};
+	multi-led@8 {
+		reg = <0x8>;
+		color = <LED_COLOR_ID_RGB>;
+		function = LED_FUNCTION_STATUS;
+	};
+	multi-led@9 {
+		reg = <0x9>;
+		color = <LED_COLOR_ID_RGB>;
+		function = LED_FUNCTION_STATUS;
+	};
+	multi-led@0A {
+		reg = <0x0A>;
+		color = <LED_COLOR_ID_RGB>;
+		function = LED_FUNCTION_STATUS;
+	};
+	multi-led@0B {
+		reg = <0x0B>;
+		color = <LED_COLOR_ID_RGB>;
+		function = LED_FUNCTION_STATUS;
+	};
+	multi-led@0C {
+		reg = <0x0C>;
+		color = <LED_COLOR_ID_RGB>;
+		function = LED_FUNCTION_STATUS;
+	};
+	multi-led@0D {
+		reg = <0x0D>;
+		color = <LED_COLOR_ID_RGB>;
+		function = LED_FUNCTION_STATUS;
+	};
+	multi-led@0E {
+		reg = <0x0E>;
+		color = <LED_COLOR_ID_RGB>;
+		function = LED_FUNCTION_STATUS;
+	};
+	multi-led@0F {
+		reg = <0x0F>;
+		color = <LED_COLOR_ID_RGB>;
+		function = LED_FUNCTION_STATUS;
+	};
+	multi-led@10 {
+		reg = <0x10>;
+		color = <LED_COLOR_ID_RGB>;
+		function = LED_FUNCTION_STATUS;
+	};
+	multi-led@11 {
+		reg = <0x11>;
+		color = <LED_COLOR_ID_RGB>;
+		function = LED_FUNCTION_STATUS;
+	};
+	multi-led@12 {
+		reg = <0x12>;
+		color = <LED_COLOR_ID_RGB>;
+		function = LED_FUNCTION_STATUS;
+	};
+	multi-led@13 {
+		reg = <0x13>;
+		color = <LED_COLOR_ID_RGB>;
+		function = LED_FUNCTION_STATUS;
+	};
+	multi-led@14 {
+		reg = <0x14>;
+		color = <LED_COLOR_ID_RGB>;
+		function = LED_FUNCTION_STATUS;
 	};
 };
-
-&emac {
-	pinctrl-0 = <&rgmii_pe_pins>;
-	pinctrl-names = "default";
-	phy-handle = <&ext_rgmii_phy>;
-	phy-mode = "rgmii-id";
-	phy-supply = <&reg_vcc_3v3>;
-	status = "disabled";
-};
-
-// &can0 {
-// 	pinctrl-names = "default";
-// 	pinctrl-0 = <&can0_pins>;
-// 	status = "okay";
-// };
-
-// &can1 {
-// 	pinctrl-names = "default";
-// 	pinctrl-0 = <&can1_pins>;
-// 	status = "disabled";
-// };
-

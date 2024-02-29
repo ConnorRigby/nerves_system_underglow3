@@ -180,10 +180,10 @@
 				function = "lcd0";
 			};
 
-			/omit-if-no-ref/
-			ledc_pc0_pin: ledc-pc0-pin {
-				pins = "PC0";
+			ledc_pe5_pin: ledc-pe5-pin {
+				pins = "PE5";
 				function = "ledc";
+				drive-strength = <10>;
 			};
 
 			/omit-if-no-ref/
@@ -329,8 +329,7 @@
 		};
 
 		ledc: led-controller@2008000 {
-			compatible = "allwinner,sun20i-d1-ledc",
-				     "allwinner,sun50i-r329-ledc";
+			compatible = "allwinner,sun20i-d1-ledc", "allwinner,sun50i-a100-ledc";
 			reg = <0x2008000 0x400>;
 			interrupts = <GIC_SPI 20 IRQ_TYPE_LEVEL_HIGH>;
 			clocks = <&ccu CLK_BUS_LEDC>, <&ccu CLK_LEDC>;
@@ -1333,24 +1332,24 @@
 			#interrupt-cells = <3>;
 		};
 
-		// can0: can@02504000 {
-		// 	compatible = "allwinner,sun20i-d1-can";
-		// 	reg = <0x02504000 0x400>;
-		// 	interrupts = <GIC_SPI 21 IRQ_TYPE_LEVEL_HIGH>;
-		// 	clocks = <&ccu CLK_BUS_CAN0>;
-		// 	clock-names = "can0";
-		// 	resets = <&ccu RST_BUS_CAN0>;
-		// 	status = "disabled";
-		// };
+		can0: can@02504000 {
+			compatible = "allwinner,sun20i-d1-can";
+			reg = <0x02504000 0x400>;
+			interrupts = <GIC_SPI 21 IRQ_TYPE_LEVEL_HIGH>;
+			clocks = <&ccu CLK_BUS_CAN0>;
+			clock-names = "can0";
+			resets = <&ccu RST_BUS_CAN0>;
+			status = "disabled";
+		};
 
-		// can1: can@02504400 {
-		// 	compatible = "allwinner,sun20i-d1-can";
-		// 	reg = <0x02504400 0x400>;
-		// 	interrupts = <GIC_SPI 22 IRQ_TYPE_LEVEL_HIGH>;
-		// 	clocks = <&ccu CLK_BUS_CAN1>;
-		// 	clock-names = "can1";
-		// 	resets = <&ccu RST_BUS_CAN1>;
-		// 	status = "disabled";
-		// };
+		can1: can@02504400 {
+			compatible = "allwinner,sun20i-d1-can";
+			reg = <0x02504400 0x400>;
+			interrupts = <GIC_SPI 22 IRQ_TYPE_LEVEL_HIGH>;
+			clocks = <&ccu CLK_BUS_CAN1>;
+			clock-names = "can1";
+			resets = <&ccu RST_BUS_CAN1>;
+			status = "disabled";
+		};
 	};
 };

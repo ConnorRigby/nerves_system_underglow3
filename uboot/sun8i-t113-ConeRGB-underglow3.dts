@@ -15,7 +15,7 @@
 
 
 / {
-	model = "MangoPi MQ-Dual";
+	model = "ConeRGB Underglow3";
 	compatible = "widora,mangopi-mq-r-t113", "allwinner,sun8i-t113s";
 
 	aliases {
