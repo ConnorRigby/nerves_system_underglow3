@@ -219,25 +219,58 @@
 				function = "emac";
 			};
 
-			/omit-if-no-ref/
+			pwm2_pe8_pin: pwm2-pe8-pin {
+				pins = "PE8";
+				function = "pwm2";
+			};
+
+			pwm3_pe9_pin: pwm3-pe9-pin {
+				pins = "PE9";
+				function = "pwm3";
+			};
+
+			pwm4_pe10_pin: pwm4-pe10-pin {
+				pins = "PE10";
+				function = "pwm4";
+			};
+
+			/* 
 			pwm0_pd16_pin: pwm0-pd16-pin {
 				pins = "PD16";
 				function = "pwm0";
 			};
 
-			/omit-if-no-ref/
+			pwm1_pd17_pin: pwm1-pd17-pin {
+				pins = "PD17";
+				function = "pwm1";
+			};
+
 			pwm2_pd18_pin: pwm2-pd18-pin {
 				pins = "PD18";
 				function = "pwm2";
 			};
 
-			/omit-if-no-ref/
+			pwm3_pd19_pin: pwm3-pd19-pin {
+				pins = "PD19";
+				function = "pwm3";
+			};
+
 			pwm4_pd20_pin: pwm4-pd20-pin {
 				pins = "PD20";
 				function = "pwm4";
 			};
 
-			/omit-if-no-ref/
+			pwm5_pd5_pin: pwm5-pd5-pin {
+				pins = "PD5";
+				function = "pwm5";
+			};
+
+			pwm6_pd9_pin: pwm6-pd9-pin {
+				pins = "PD6";
+				function = "pwm6";
+			};
+			*/
+
 			pwm7_pd22_pin: pwm7-pd22-pin {
 				pins = "PD22";
 				function = "pwm7";
@@ -303,17 +336,17 @@
 				function = "can1";
 				drive-strength = <10>;
 				bias-pull-up;
-			};		
+			};
 		};
 
 		pwm: pwm@2000c00 {
 			compatible = "allwinner,sun20i-d1-pwm";
 			reg = <0x2000c00 0x400>;
-			interrupts = <GIC_SPI 18 IRQ_TYPE_LEVEL_HIGH>;
-			clocks = <&ccu CLK_BUS_PWM>, <&osc24M>;
-			clock-names = "bus", "mod";
+			// interrupts = <GIC_SPI 18 IRQ_TYPE_LEVEL_HIGH>;
+			clocks = <&ccu CLK_BUS_PWM>, <&osc24M>, <&ccu CLK_APB0>;
+			clock-names = "bus", "hosc", "apb0";
 			resets = <&ccu RST_BUS_PWM>;
-			status = "disabled";
+			status = "okay";
 			#pwm-cells = <3>;
 		};
 
@@ -328,6 +361,7 @@
 			#reset-cells = <1>;
 		};
 
+		/*
 		ledc: led-controller@2008000 {
 			compatible = "allwinner,sun20i-d1-ledc", "allwinner,sun50i-a100-ledc";
 			reg = <0x2008000 0x400>;
@@ -341,6 +375,7 @@
 			#address-cells = <1>;
 			#size-cells = <0>;
 		};
+		*/
 
 		ths: temperature-sensor@2009400 {
 			compatible = "allwinner,sun20i-d1-ths";

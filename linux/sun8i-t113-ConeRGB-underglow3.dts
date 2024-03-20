@@ -3,25 +3,44 @@
 
 /dts-v1/;
 
-#include <dt-bindings/gpio/gpio.h>
-#include <dt-bindings/leds/common.h>
 #include "sun8i-t113.dtsi"
+
+#include <dt-bindings/gpio/gpio.h>
+#include <dt-bindings/input/input.h>
+#include <dt-bindings/leds/common.h>
+#include <dt-bindings/pwm/pwm.h>
 
 / {
 	model = "ConeRGB Underglow3";
 	compatible = "allwinner,sun20i-d1", "allwinner,sun8i";
 
 	aliases {
-		ethernet0 = &rtl8189fs;
 		mmc0 = &mmc0;
 		serial0 = &uart0;
 		serial1 = &uart1;
-		serial3 = &uart3;
 	};
 
 	chosen {
 		stdout-path = "serial0:115200n8";
 	};
+
+/*
+	reserved-memory {
+		#address-cells = <1>;
+		#size-cells = <1>;
+		ranges;
+
+		ramoops@4ff00000 {
+			compatible = "ramoops";
+			reg = <0x4ff00000 0x100000>;
+			ecc-size = <16>;
+			record-size     = <0x00020000>;
+			console-size    = <0x00020000>;
+			ftrace-size     = <0>;
+			pmsg-size       = <0x00020000>;
+		};
+	};
+*/
 
 	reg_vcc: vcc {
 		compatible = "regulator-fixed";
@@ -46,6 +65,7 @@
 		vin-supply = <&reg_vcc>;
 	};
 
+/*
 	reg_avdd2v8: avdd2v8 {
 		compatible = "regulator-fixed";
 		regulator-name = "avdd2v8";
@@ -53,6 +73,7 @@
 		regulator-max-microvolt = <2800000>;
 		vin-supply = <&reg_vcc_3v3>;
 	};
+*/
 
 	reg_vdd_cpu: vdd-cpu {
 		compatible = "regulator-fixed";
@@ -61,15 +82,42 @@
 		regulator-max-microvolt = <900000>;
 		vin-supply = <&reg_vcc>;
 	};
-
+/*
 	leds {
 		compatible = "gpio-leds";
 
-		status {
-			label = "led_blue";
-			linux,default-trigger = "heartbeat";
+		led-0 {
+			color = <LED_COLOR_ID_BLUE>;
+			function = LED_FUNCTION_STATUS;
 			gpios = <&pio 3 22 GPIO_ACTIVE_LOW>;
-			default-state = "on";
+		};
+	};
+*/	
+    led-controller {
+        compatible = "pwm-leds";
+        led-1 {
+			color = <LED_COLOR_ID_BLUE>;
+            label = "underglow:blue";
+			pwms = <&pwm 7 100000 0>;
+            max-brightness = <255>;
+			active-low;
+        };
+    };
+
+	buttons {
+		compatible = "gpio-keys";
+		autorepeat;
+
+		button@1 {
+			label = "User Input 1";
+			linux,code = <KEY_A>;
+			gpios = <&pio 3 15 GPIO_ACTIVE_LOW>; /* PD15 */
+		};
+
+		button@2 {
+			label = "User Input 2";
+			linux,code = <KEY_B>;
+			gpios = <&pio 3 14 GPIO_ACTIVE_LOW>; /* PD14 */
 		};
 	};
 
@@ -107,21 +155,9 @@
 	vcc-pb-supply = <&reg_vcc_3v3>;
 	vcc-pc-supply = <&reg_vcc_3v3>;
 	vcc-pd-supply = <&reg_vcc_3v3>;
-	vcc-pe-supply = <&reg_avdd2v8>;
+	vcc-pe-supply = <&reg_vcc_3v3>;
 	vcc-pf-supply = <&reg_vcc_3v3>;
 	vcc-pg-supply = <&reg_vcc_3v3>;
-
-	can1_pins_a: can1_pins@0 {
-		pins = "PB4", "PB5";
-		function = "can1";
-		drive-strength = <10>;
-		bias-pull-up;
-	};		
-
-	uart5_pb4_pins: uart5-pb4-pins {
-	    pins = "PB4", "PB5";
-	    function = "uart5";
-	};
 
 	clk_pg11_pin: clk-pg11-pin {
 			pins = "PG11";
@@ -143,22 +179,11 @@
 	status = "okay";
 };
 
-&uart3 {
-	pinctrl-0 = <&uart3_pb_pins>;
-	pinctrl-names = "default";
-	status = "okay";
-};
-
-&uart5 {
-	pinctrl-0 = <&uart5_pb4_pins>;
-	pinctrl-names = "default";
-	status = "disabled";
-};
-
 &i2c2 {
 	pinctrl-0 = <&i2c2_pe12_pins>;
 	pinctrl-names = "default";
 	status = "okay";
+	clock-frequency = <62000>;
 };
 
 &spi0 {
@@ -202,7 +227,7 @@
 };
 
 &ehci0 {
-	status = "disabled";
+	status = "okay";
 };
 
 &ehci1 {
@@ -211,13 +236,12 @@
 
 
 &ohci0 {
-	status = "disabled";
+	status = "okay";
 };
 
 &ohci1 {
 	status = "okay";
 };
-
 
 &ths {
 	status = "okay";
@@ -236,120 +260,4 @@
 	status = "okay";
 };
 
-&ledc {
-	pinctrl-0 = <&ledc_pe5_pin>;
-	pinctrl-names = "default";
-	reg = <0x2008000 0x14>;
-	status = "okay";
-	allwinner,pixel-format = "grb";
-	allwinner,t0h-ns = "320";
-	allwinner,t0l-ns = "800";
-	allwinner,t1h-ns = "840";
-	allwinner,t1l-ns = "400";
-	allwinner,treset-ns = "300000";
-	multi-led@0 {
-		reg = <0x0>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-	multi-led@1 {
-		reg = <0x1>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-	multi-led@2 {
-		reg = <0x2>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-	multi-led@3 {
-		reg = <0x3>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-	multi-led@4 {
-		reg = <0x4>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-	multi-led@5 {
-		reg = <0x5>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-	multi-led@6 {
-		reg = <0x6>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-	multi-led@7 {
-		reg = <0x7>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-	multi-led@8 {
-		reg = <0x8>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-	multi-led@9 {
-		reg = <0x9>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-	multi-led@0A {
-		reg = <0x0A>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-	multi-led@0B {
-		reg = <0x0B>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-	multi-led@0C {
-		reg = <0x0C>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-	multi-led@0D {
-		reg = <0x0D>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-	multi-led@0E {
-		reg = <0x0E>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-	multi-led@0F {
-		reg = <0x0F>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-	multi-led@10 {
-		reg = <0x10>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-	multi-led@11 {
-		reg = <0x11>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-	multi-led@12 {
-		reg = <0x12>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-	multi-led@13 {
-		reg = <0x13>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-	multi-led@14 {
-		reg = <0x14>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-};
+// #include "sun8i-t113-ledc.dtsi"
