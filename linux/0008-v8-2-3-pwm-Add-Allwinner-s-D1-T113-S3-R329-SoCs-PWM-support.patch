@@ -395,14 +395,13 @@ index 000000000000..19bf3f495155
 +	return 0;
 +}
 +
-+static int sun20i_pwm_remove(struct platform_device *pdev)
++static void sun20i_pwm_remove(struct platform_device *pdev)
 +{
 +	struct sun20i_pwm_chip *sun20i_chip = platform_get_drvdata(pdev);
 +
 +	pwmchip_remove(&sun20i_chip->chip);
 +
 +	reset_control_assert(sun20i_chip->rst);
-+   return 0; 
 +}
 +
 +static struct platform_driver sun20i_pwm_driver = {
@@ -411,7 +410,7 @@ index 000000000000..19bf3f495155
 +		.of_match_table = sun20i_pwm_dt_ids,
 +	},
 +	.probe = sun20i_pwm_probe,
-+	.remove = sun20i_pwm_remove,
++	.remove_new = sun20i_pwm_remove,
 +};
 +module_platform_driver(sun20i_pwm_driver);
 +

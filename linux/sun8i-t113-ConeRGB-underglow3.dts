@@ -1,9 +1,11 @@
 // SPDX-License-Identifier: (GPL-2.0+ or MIT)
 // Copyright (C) 2024 Connor Rigby <connorr@hey.com>
 
+#include <dt-bindings/interrupt-controller/irq.h>
+
 /dts-v1/;
 
-#include "sun8i-t113.dtsi"
+#include <arm/allwinner/sun8i-t113s.dtsi>
 
 #include <dt-bindings/gpio/gpio.h>
 #include <dt-bindings/input/input.h>
@@ -12,7 +14,7 @@
 
 / {
 	model = "ConeRGB Underglow3";
-	compatible = "allwinner,sun20i-d1", "allwinner,sun8i";
+	compatible = "allwinner,sun8i-t113s", "allwinner,sun8i";
 
 	aliases {
 		mmc0 = &mmc0;
@@ -24,75 +26,33 @@
 		stdout-path = "serial0:115200n8";
 	};
 
-/*
-	reserved-memory {
-		#address-cells = <1>;
-		#size-cells = <1>;
-		ranges;
-
-		ramoops@4ff00000 {
-			compatible = "ramoops";
-			reg = <0x4ff00000 0x100000>;
-			ecc-size = <16>;
-			record-size     = <0x00020000>;
-			console-size    = <0x00020000>;
-			ftrace-size     = <0>;
-			pmsg-size       = <0x00020000>;
-		};
-	};
-*/
-
-	reg_vcc: vcc {
+	/* board wide 5V supply directly from the USB-C socket */
+	reg_vcc5v: regulator-5v {
 		compatible = "regulator-fixed";
-		regulator-name = "vcc";
+		regulator-name = "vcc-5v";
 		regulator-min-microvolt = <5000000>;
 		regulator-max-microvolt = <5000000>;
+		regulator-always-on;
 	};
 
-	reg_usbvbus: usbvbus {
-		compatible = "regulator-fixed";
-		regulator-name = "usbvbus";
-		regulator-min-microvolt = <5000000>;
-		regulator-max-microvolt = <5000000>;
-		vin-supply = <&reg_vcc>;
-	};
-
-	reg_vcc_3v3: vcc-3v3 {
+	/* SY8008 DC/DC regulator on the board */
+	reg_3v3: regulator-3v3 {
 		compatible = "regulator-fixed";
 		regulator-name = "vcc-3v3";
 		regulator-min-microvolt = <3300000>;
 		regulator-max-microvolt = <3300000>;
-		vin-supply = <&reg_vcc>;
+		vin-supply = <&reg_vcc5v>;
 	};
 
-/*
-	reg_avdd2v8: avdd2v8 {
+	/* SY8008 DC/DC regulator on the board, also supplying VDD-SYS */
+	reg_vcc_core: regulator-core {
 		compatible = "regulator-fixed";
-		regulator-name = "avdd2v8";
-		regulator-min-microvolt = <2800000>;
-		regulator-max-microvolt = <2800000>;
-		vin-supply = <&reg_vcc_3v3>;
+		regulator-name = "vcc-core";
+		regulator-min-microvolt = <880000>;
+		regulator-max-microvolt = <880000>;
+		vin-supply = <&reg_vcc5v>;
 	};
-*/
 
-	reg_vdd_cpu: vdd-cpu {
-		compatible = "regulator-fixed";
-		regulator-name = "vdd-cpu";
-		regulator-min-microvolt = <900000>;
-		regulator-max-microvolt = <900000>;
-		vin-supply = <&reg_vcc>;
-	};
-/*
-	leds {
-		compatible = "gpio-leds";
-
-		led-0 {
-			color = <LED_COLOR_ID_BLUE>;
-			function = LED_FUNCTION_STATUS;
-			gpios = <&pio 3 22 GPIO_ACTIVE_LOW>;
-		};
-	};
-*/	
     led-controller {
         compatible = "pwm-leds";
         led-1 {
@@ -123,28 +83,28 @@
 
 	wifi_pwrseq: wifi-pwrseq {
 		compatible = "mmc-pwrseq-simple";
-		clocks = <&ccu CLK_FANOUT1>;
-		clock-names = "ext_clock";
 		reset-gpios = <&pio 6 12 GPIO_ACTIVE_LOW>; /* PG12 */
-		assigned-clocks = <&ccu CLK_FANOUT1>;
-		assigned-clock-rates = <32768>;
-		pinctrl-0 = <&clk_pg11_pin>;
-		pinctrl-names = "default";
 	};
 };
 
-&reg_aldo {
-	regulator-min-microvolt = <1800000>;
-	regulator-max-microvolt = <1800000>;
-	vdd33-supply = <&reg_vcc_3v3>;
+&dcxo {
+	clock-frequency = <24000000>;
 };
 
+/*
+&cpus {
+	enable-method = "allwinner,sun8iw20p1";
+};
+*/
+
 &cpu0 {
-	cpu-supply = <&reg_vdd_cpu>;
+	cpu-supply = <&reg_vcc_core>;
+	clock-frequency = <1200000000>;
 };
 
 &cpu1 {
-	cpu-supply = <&reg_vdd_cpu>;
+	cpu-supply = <&reg_vcc_core>;
+	clock-frequency = <1200000000>;
 };
 
 &wdt {
@@ -152,18 +112,21 @@
 };
 
 &pio {
-	vcc-pb-supply = <&reg_vcc_3v3>;
-	vcc-pc-supply = <&reg_vcc_3v3>;
-	vcc-pd-supply = <&reg_vcc_3v3>;
-	vcc-pe-supply = <&reg_vcc_3v3>;
-	vcc-pf-supply = <&reg_vcc_3v3>;
-	vcc-pg-supply = <&reg_vcc_3v3>;
+	vcc-pb-supply = <&reg_3v3>;
+	vcc-pd-supply = <&reg_3v3>;
+	vcc-pe-supply = <&reg_3v3>;
+	vcc-pf-supply = <&reg_3v3>;
+	vcc-pg-supply = <&reg_3v3>;
 
-	clk_pg11_pin: clk-pg11-pin {
-			pins = "PG11";
-			function = "clk";
+	uart0_pe2_pins: uart0-pe2-pins {
+		pins = "PE2", "PE3";
+		function = "uart0";
 	};
 
+	i2c2_pe12_pins: i2c2-pe12-pins {
+		pins = "PE12", "PE13";
+		function = "i2c2";
+	};
 };
 
 &uart0 {
@@ -186,43 +149,41 @@
 	clock-frequency = <62000>;
 };
 
-&spi0 {
-	pinctrl-0 = <&spi0_pins>;
-	pinctrl-names = "default";
-	status = "okay";
-};
-
 &mmc0 {
-	bus-width = <4>;
-	cd-gpios = <&pio 5 6 (GPIO_ACTIVE_LOW)>;
-	disable-wp;
-	vmmc-supply = <&reg_vcc_3v3>;
-	vqmmc-supply = <&reg_vcc_3v3>;
 	pinctrl-0 = <&mmc0_pins>;
 	pinctrl-names = "default";
+	vmmc-supply = <&reg_3v3>;
+	cd-gpios = <&pio 5 6 GPIO_ACTIVE_LOW>;
+	disable-wp;
+	bus-width = <4>;
 	status = "okay";
 };
 
 &mmc1 {
-	bus-width = <4>;
-	mmc-pwrseq = <&wifi_pwrseq>;
-	non-removable;
-	vmmc-supply = <&reg_vcc_3v3>;
-	vqmmc-supply = <&reg_vcc_3v3>;
 	pinctrl-0 = <&mmc1_pins>;
 	pinctrl-names = "default";
+	vmmc-supply = <&reg_3v3>;
+	non-removable;
+	bus-width = <4>;
+	mmc-pwrseq = <&wifi_pwrseq>;
 	status = "okay";
 
-    rtl8189fs: sdio_wifi@1 {
-        reg = <1>;
+	rtl8189ftv: wifi@1 {
+		reg = <1>;
 		interrupt-parent = <&pio>;
-		interrupts = <6 10 IRQ_TYPE_LEVEL_HIGH>; /* PG10 */
+		interrupts = <6 10 IRQ_TYPE_LEVEL_LOW>; /* PG10 = WL_WAKE_AP */
 		interrupt-names = "host-wake";
-    };
+	};
 };
 
+/* The USB-C socket has its CC pins pulled to GND, so is hardwired as a UFP. */
 &usb_otg {
-	dr_mode = "otg";
+	dr_mode = "peripheral";
+	status = "okay";
+};
+
+&usbphy {
+	usb1_vbus-supply = <&reg_vcc5v>;
 	status = "okay";
 };
 
@@ -234,23 +195,11 @@
 	status = "okay";
 };
 
-
 &ohci0 {
 	status = "okay";
 };
 
 &ohci1 {
-	status = "okay";
-};
-
-&ths {
-	status = "okay";
-/*	vref-supply = <&reg_aldo>; */
-};
-
-&usbphy {
-	usb0_vbus-supply = <&reg_usbvbus>;
-	usb1_vbus-supply = <&reg_usbvbus>;
 	status = "okay";
 };
 
