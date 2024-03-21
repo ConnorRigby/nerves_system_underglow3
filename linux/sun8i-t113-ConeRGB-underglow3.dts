@@ -56,11 +56,22 @@
     led-controller {
         compatible = "pwm-leds";
         led-1 {
+			pinctrl-0 = <&pwm2_pe8_pins>;
+			pinctrl-names = "default";
 			color = <LED_COLOR_ID_BLUE>;
             label = "underglow:blue";
-			pwms = <&pwm 0 100000 0>;
-            max-brightness = <255>;
+			pwms = <&pwm 7 100000 0>;
+            max-brightness = <100000>;
 			active-low;
+        };
+
+        led-2 {
+			pinctrl-0 = <&pwm7_pd22_pins>;
+			pinctrl-names = "default";
+			color = <LED_COLOR_ID_BLUE>;
+            label = "underglow:red";
+			pwms = <&pwm 2 100000 0>;
+            max-brightness = <100000>;
         };
     };
 
@@ -90,12 +101,6 @@
 &dcxo {
 	clock-frequency = <24000000>;
 };
-
-/*
-&cpus {
-	enable-method = "allwinner,sun8iw20p1";
-};
-*/
 
 &cpu0 {
 	cpu-supply = <&reg_vcc_core>;
@@ -128,11 +133,15 @@
 		function = "i2c2";
 	};
 
-	pwm7_pd22_pin: pwm7-pd22-pin {
+	pwm2_pe8_pins: pwm2-pe8-pins {
+		pins = "PE8";
+		function = "pwm2";
+	};
+
+	pwm7_pd22_pins: pwm7-pd22-pins {
 		pins = "PD22";
 		function = "pwm7";
 	};
-
 };
 
 &pwm {
@@ -197,15 +206,7 @@
 	status = "okay";
 };
 
-&ehci0 {
-	status = "okay";
-};
-
 &ehci1 {
-	status = "okay";
-};
-
-&ohci0 {
 	status = "okay";
 };
 
