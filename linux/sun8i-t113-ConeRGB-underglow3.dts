@@ -58,7 +58,7 @@
         led-1 {
 			color = <LED_COLOR_ID_BLUE>;
             label = "underglow:blue";
-			pwms = <&pwm 7 100000 0>;
+			pwms = <&pwm 0 100000 0>;
             max-brightness = <255>;
 			active-low;
         };
@@ -127,6 +127,16 @@
 		pins = "PE12", "PE13";
 		function = "i2c2";
 	};
+
+	pwm7_pd22_pin: pwm7-pd22-pin {
+		pins = "PD22";
+		function = "pwm7";
+	};
+
+};
+
+&pwm {
+	status = "okay";
 };
 
 &uart0 {
