@@ -1,6 +1,10 @@
 # ConeRGB Underglow3 Nerves Support
 
+[![Hex version](https://img.shields.io/hexpm/v/nerves_system_underglow3.svg "Hex version")](https://hex.pm/packages/nerves_system_underglow3)
+
 This is the base Nerves System configuration for [ConeRGB V3](https://github.com/connorrigby/underglow3).
+
+![](assets/underglow3-pcb.jpg)
 
 
 | Feature              | Description                     |
