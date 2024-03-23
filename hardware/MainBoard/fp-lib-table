@@ -1,0 +1,12 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "CPU_Allwinner_T113-S3")(type "KiCad")(uri "${KIPRJMOD}/../library/CPU_Allwinner_T113-S3.pretty")(options "")(descr ""))
+  (lib (name "Connector_LCSC_USB")(type "KiCad")(uri "${KIPRJMOD}/../library/Connector_LCSC_USB.pretty")(options "")(descr ""))
+  (lib (name "Connector_LCSC_SDCard")(type "KiCad")(uri "${KIPRJMOD}/../library/Connector_LCSC_SDCard.pretty")(options "")(descr ""))
+  (lib (name "Tag-Connect")(type "KiCad")(uri "${KIPRJMOD}/../library/Tag-Connect.pretty")(options "")(descr ""))
+  (lib (name "Inductor_LCSC")(type "KiCad")(uri "${KIPRJMOD}/../library/Inductor_LCSC.pretty")(options "")(descr ""))
+  (lib (name "Memory_Flash_LCSC")(type "KiCad")(uri "${KIPRJMOD}/../library/Memory_Flash_LCSC.pretty")(options "")(descr ""))
+  (lib (name "Module_WiFi_BT")(type "KiCad")(uri "${KIPRJMOD}/../library/Module_WiFi_BT.pretty")(options "")(descr ""))
+  (lib (name "Antenna_LCSC")(type "KiCad")(uri "${KIPRJMOD}/../library/Antenna_LCSC.pretty")(options "")(descr ""))
+  (lib (name "Connector_Aptiv")(type "KiCad")(uri "${KIPRJMOD}/../library/Connector_Aptiv.pretty")(options "")(descr ""))
+)

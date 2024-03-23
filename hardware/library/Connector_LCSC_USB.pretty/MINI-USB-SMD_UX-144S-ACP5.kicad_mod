@@ -1,0 +1,238 @@
+(footprint "MINI-USB-SMD_UX-144S-ACP5"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "MINI-USB-SMD_UX-144S-ACP5 footprint")
+	(tags "MINI-USB-SMD_UX-144S-ACP5 footprint")
+	(property "Reference" "REF**"
+		(at 0.000254 -5.556033 0)
+		(layer "F.SilkS")
+		(uuid "46d6b18c-eaea-49d3-950c-86d087571788")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "MINI-USB-SMD_UX-144S-ACP5"
+		(at 0.000254 7.841885 0)
+		(layer "F.Fab")
+		(uuid "a3f254b7-0e72-4b55-ab46-a3c93f465825")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f62bdf30-7256-48b3-ac81-b9dd8026d849")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "376344f8-0435-4aa8-8852-745e85b33c7f")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e9fe2593-0750-4619-9c3d-bc792ce497b4")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -4.698755 1.66886)
+		(end -4.698755 -1.46886)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "dca10299-a23c-4c00-9809-14aa52e595eb")
+	)
+	(fp_line
+		(start -4.698755 5.841885)
+		(end -4.698755 4.03114)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3dbb6224-1f06-4990-99a0-9df0dc855040")
+	)
+	(fp_line
+		(start -4.698755 5.841885)
+		(end 4.699263 5.841885)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7105b44e-be3c-4f36-96c9-d51eca0b3182")
+	)
+	(fp_line
+		(start -2.081102 -3.556033)
+		(end -3.218821 -3.556033)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "68495fb2-f310-4c65-80b4-16fe4c0b366c")
+	)
+	(fp_line
+		(start 3.218923 -3.556033)
+		(end 2.081204 -3.556033)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "8a7bac73-f580-4aba-b8f0-475a01e7eadd")
+	)
+	(fp_line
+		(start 4.69906 1.66886)
+		(end 4.69906 -1.46886)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f6af4d9c-de00-430d-b5fd-53bacb2eff8c")
+	)
+	(fp_line
+		(start 4.699263 5.841885)
+		(end 4.699263 4.030861)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "fb160157-0a58-46a7-920c-42d6ea72bbdc")
+	)
+	(fp_circle
+		(center -1.6 -3.8)
+		(end -1.570003 -3.8)
+		(stroke
+			(width 0.059995)
+			(type solid)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "d1802a50-164a-4315-8152-781a8502560a")
+	)
+	(fp_text user "REF**"
+		(at 0.000254 9.841885 0)
+		(layer "F.Fab")
+		(uuid "00ef4a31-4ea3-43ce-9116-d92496805761")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "" np_thru_hole circle
+		(at -2.199898 -0.099949)
+		(size 1 1)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(uuid "3a02d721-f1c3-4c40-a7f4-538a96251cf9")
+	)
+	(pad "" np_thru_hole circle
+		(at 2.200152 -0.099949)
+		(size 1 1)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(uuid "dc1716aa-07f5-499a-bbb4-9f2edc1ba092")
+	)
+	(pad "1" smd rect
+		(at -1.599949 -2.850013)
+		(size 0.5 1.7)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "1cff2a46-b07f-4eaa-82b2-04b0d38a6392")
+	)
+	(pad "2" smd rect
+		(at -0.799848 -2.850013)
+		(size 0.5 1.7)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "d544b23e-6bc6-4406-a926-387b010b7cd5")
+	)
+	(pad "3" smd rect
+		(at 0 -2.850013)
+		(size 0.5 1.7)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "e40ee977-d2c9-4d3c-97bc-a93291fe0f3a")
+	)
+	(pad "4" smd rect
+		(at 0.800102 -2.850013)
+		(size 0.5 1.7)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "f2b4551b-9e1a-4345-9bce-46bb2f1179d4")
+	)
+	(pad "5" smd rect
+		(at 1.599949 -2.850013)
+		(size 0.5 1.7)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "344ba3b8-d31c-4a17-ab0c-1a54a15633a0")
+	)
+	(pad "6" smd rect
+		(at -4.175006 -2.650114)
+		(size 1.450013 1.9)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "6d1bc5c6-ccd1-43ca-81ca-ba0986a765d3")
+	)
+	(pad "7" smd rect
+		(at -4.175006 2.850013)
+		(size 1.450013 1.9)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "cfe99f17-3551-4fa3-9d87-a57d9f18c06a")
+	)
+	(pad "8" smd rect
+		(at 4.175006 2.850013)
+		(size 1.450013 1.9)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "6f4e6621-70b3-41ee-bce7-fd371269cec0")
+	)
+	(pad "9" smd rect
+		(at 4.175006 -2.650114)
+		(size 1.450013 1.9)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "cc1a2bf1-1e6b-4244-a16a-6d7d706a5e55")
+	)
+	(model "${KICAD8_3DMODEL_DIR}/Connector_USB.3dshapes/USB_Mini-B_Lumberg_2486_01_Horizontal.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

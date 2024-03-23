@@ -1,0 +1,132 @@
+(footprint "IND-SMD_L2.0-W1.6_VLS201610CX-150M"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "IND-SMD_L2.0-W1.6_VLS201610CX-150M footprint")
+	(tags "IND-SMD_L2.0-W1.6_VLS201610CX-150M footprint")
+	(property "Reference" "REF**"
+		(at 0 -1.8 0)
+		(layer "F.SilkS")
+		(uuid "06238b7f-9bae-4320-9101-6f8fe1f2b72e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "IND-SMD_L2.0-W1.6_VLS201610CX-150M"
+		(at -0.000089 3.049962 0)
+		(layer "F.Fab")
+		(uuid "c560b379-c714-471b-b123-c04cec4b04b5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "68b0ac6c-94c0-4528-a20f-3c1506cc23f0")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "424feab4-0f05-44bc-994e-85985e3c7e5f")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "bf576d0e-d37c-450d-8d70-e2d00b5effab")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -1.4 -1.049987)
+		(end 1.394006 -1.049987)
+		(stroke
+			(width 0.11999)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a0a61462-daa7-4a9d-bf00-d24d53dc22f7")
+	)
+	(fp_line
+		(start 1.399822 1.049962)
+		(end -1.394183 1.049962)
+		(stroke
+			(width 0.11999)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "9f120fc3-7a99-4c10-89ec-b653e0863760")
+	)
+	(fp_circle
+		(center -1 0.800102)
+		(end -0.970028 0.800102)
+		(stroke
+			(width 0.059995)
+			(type solid)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "e6f8c275-1e35-4fea-a8f2-12362938397b")
+	)
+	(fp_text user "REF**"
+		(at -0.000089 5.049962 0)
+		(layer "F.Fab")
+		(uuid "0d10880a-4e95-4917-8753-905dd1120c87")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -0.849886 0)
+		(size 1 1.720015)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "d54113a5-4a9b-4baa-8500-31ef016a1532")
+	)
+	(pad "2" smd rect
+		(at 0.849886 0)
+		(size 1 1.720015)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "73cd9b35-6b50-4b92-a879-67f3857f9f0e")
+	)
+	(model "${KIPRJMOD}/../library/Inductor_LCSC.pretty/packages3d/IND-SMD_L2.0-W1.6_VLS201610CX-150M.wrl"
+		(offset
+			(xyz 0 0 0.0200659997)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

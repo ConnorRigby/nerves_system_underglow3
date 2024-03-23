@@ -1,0 +1,12 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "CPU_Allwinner_T113-S3")(type "KiCad")(uri "${KIPRJMOD}/../library/CPU_Allwinner_T113-S3.kicad_sym")(options "")(descr ""))
+  (lib (name "Connector_LCSC_SDCard")(type "KiCad")(uri "${KIPRJMOD}/../library/Connector_LCSC_SDCard.kicad_sym")(options "")(descr ""))
+  (lib (name "Tag-Connect")(type "KiCad")(uri "${KIPRJMOD}/../library/Tag-Connect.kicad_sym")(options "")(descr ""))
+  (lib (name "LCSC_Regulator")(type "KiCad")(uri "${KIPRJMOD}/../library/LCSC_Regulator.kicad_sym")(options "")(descr ""))
+  (lib (name "Inductor_LCSC")(type "KiCad")(uri "${KIPRJMOD}/../library/Inductor_LCSC.kicad_sym")(options "")(descr ""))
+  (lib (name "Memory_Flash_LCSC")(type "KiCad")(uri "${KIPRJMOD}/../library/Memory_Flash_LCSC.kicad_sym")(options "")(descr ""))
+  (lib (name "Module_WiFi_BT")(type "KiCad")(uri "${KIPRJMOD}/../library/Module_WiFi_BT.kicad_sym")(options "")(descr ""))
+  (lib (name "LCSC_Antenna")(type "KiCad")(uri "${KIPRJMOD}/../library/LCSC_Antenna.kicad_sym")(options "")(descr ""))
+  (lib (name "Connector_Aptiv")(type "KiCad")(uri "${KIPRJMOD}/../library/Connector_Aptiv.kicad_sym")(options "")(descr ""))
+)
