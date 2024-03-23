@@ -15,3 +15,11 @@ follows:
 ## v0.1.0
 
 This is the initial release.
+
+* WiFi+BT does not work yet. next pcb revision required for brcmfmac.
+* PWM works, leds in device tree. likely will change.
+* LEDC works, leds in device tree. likely will change.
+* user input configured but not tested.
+* linux v6.7.1
+* uboot 2024.04-rc4
+* nerves_system_br v1.27.0
