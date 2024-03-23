@@ -53,26 +53,68 @@
 		vin-supply = <&reg_vcc5v>;
 	};
 
-    led-controller {
-        compatible = "pwm-leds";
-        led-1 {
-			pinctrl-0 = <&pwm2_pe8_pins>;
-			pinctrl-names = "default";
-			color = <LED_COLOR_ID_BLUE>;
-            label = "underglow:blue";
-			pwms = <&pwm 7 100000 0>;
-            max-brightness = <100000>;
-			active-low;
-        };
+	leds {
+		compatible = "gpio-leds";
 
-        led-2 {
-			pinctrl-0 = <&pwm7_pd22_pins>;
-			pinctrl-names = "default";
+		led-0 {
 			color = <LED_COLOR_ID_BLUE>;
-            label = "underglow:red";
-			pwms = <&pwm 2 100000 0>;
+			function = LED_FUNCTION_STATUS;
+			gpios = <&pio 3 22 GPIO_ACTIVE_LOW>; /* PD22 */
+		};
+	};
+
+    led-controller@0 {
+        compatible = "pwm-leds-multicolor";
+		pinctrl-0 = <&pwm1_pd17_pins>, <&pwm2_pd18_pins>, <&pwm3_pd19_pins>;
+		pinctrl-names = "default";
+		multi-led {
+			color = <LED_COLOR_ID_RGB>;
+            function = LED_FUNCTION_INDICATOR;
             max-brightness = <100000>;
-        };
+			label = "underglow:0";
+			led-red {
+				color = <LED_COLOR_ID_RED>;
+				pwms = <&pwm 1 100000 0>;
+				max-brightness = <100000>;
+			};
+			led-green {
+				color = <LED_COLOR_ID_GREEN>;
+				pwms = <&pwm 2 100000 0>;
+				max-brightness = <100000>;
+			};
+			led-glue {
+				color = <LED_COLOR_ID_BLUE>;
+				pwms = <&pwm 3 100000 0>;
+				max-brightness = <100000>;
+			};
+		};
+    };
+
+    led-controller@1 {
+        compatible = "pwm-leds-multicolor";
+		pinctrl-0 = <&pwm4_pd20_pins>, <&pwm6_pd9_pins>, <&pwm0_pd16_pins>;
+		pinctrl-names = "default";
+		multi-led {
+			color = <LED_COLOR_ID_RGB>;
+            function = LED_FUNCTION_INDICATOR;
+            max-brightness = <100000>;
+			label = "underglow:1";
+			led-red {
+				color = <LED_COLOR_ID_RED>;
+				pwms = <&pwm 4 100000 0>;
+				max-brightness = <100000>;
+			};
+			led-green {
+				color = <LED_COLOR_ID_GREEN>;
+				pwms = <&pwm 6 100000 0>;
+				max-brightness = <100000>;
+			};
+			led-glue {
+				color = <LED_COLOR_ID_BLUE>;
+				pwms = <&pwm 0 100000 0>;
+				max-brightness = <100000>;
+			};
+		};
     };
 
 	buttons {
@@ -82,19 +124,20 @@
 		button@1 {
 			label = "User Input 1";
 			linux,code = <KEY_A>;
-			gpios = <&pio 3 15 GPIO_ACTIVE_LOW>; /* PD15 */
+			gpios = <&pio 3 15 0>; /* PD15 */
 		};
 
 		button@2 {
 			label = "User Input 2";
 			linux,code = <KEY_B>;
-			gpios = <&pio 3 14 GPIO_ACTIVE_LOW>; /* PD14 */
+			gpios = <&pio 3 14 0>; /* PD14 */
 		};
 	};
 
 	wifi_pwrseq: wifi-pwrseq {
 		compatible = "mmc-pwrseq-simple";
-		reset-gpios = <&pio 6 12 GPIO_ACTIVE_LOW>; /* PG12 */
+		reset-gpios = <&pio 6 12 GPIO_ACTIVE_HIGH>; /* PG12 */
+		post-power-on-delay-ms = <200>;
 	};
 };
 
@@ -117,6 +160,80 @@
 };
 
 &pio {
+	gpio-line-names = 
+		"PB2",
+		"PB3",
+		"PB4",
+		"PB5",
+		"PB6",
+		"PB7",
+		"PC2",
+		"PC3",
+		"PC4",
+		"PC5",
+		"PC6",
+		"PC7",
+		"PD0",
+		"PD1",
+		"PD2",
+		"PD3",
+		"PD4",
+		"PD5",
+		"PD6",
+		"PD7",
+		"PD8",
+		"PD9",
+		"PD10",
+		"PD11",
+		"PD12",
+		"PD13",
+		"PD14",
+		"PD15",
+		"PWM0",
+		"PWM1",
+		"PWM2",
+		"PWM3",
+		"PWM4",
+		"RELAY_SW",
+		"PD22",
+		"PE0",
+		"PE1",
+		"PE2",
+		"PE3",
+		"PE4",
+		"LEDC",
+		"PE6",
+		"PE7",
+		"PE8",
+		"PE9",
+		"PE10",
+		"PE11",
+		"PE12",
+		"PE13",
+		"PF0",
+		"PF1",
+		"PF2",
+		"PF3",
+		"PF4",
+		"PF5",
+		"PF6",
+		"PG0",
+		"PG1",
+		"PG2",
+		"PG3",
+		"PG4",
+		"PG5",
+		"PG6",
+		"PG7",
+		"PG8",
+		"PG9",
+		"PG10",
+		"PG11",
+		"PG12",
+		"PG13",
+		"PG14",
+		"PG15";
+
 	vcc-pb-supply = <&reg_3v3>;
 	vcc-pd-supply = <&reg_3v3>;
 	vcc-pe-supply = <&reg_3v3>;
@@ -133,19 +250,69 @@
 		function = "i2c2";
 	};
 
-	pwm2_pe8_pins: pwm2-pe8-pins {
-		pins = "PE8";
+	pwm0_pd16_pins: pwm0-pd16-pins {
+		pins = "PD16";
+		function = "pwm0";
+	};
+
+	pwm1_pd17_pins: pwm1-pd16-pins {
+		pins = "PD17";
+		function = "pwm1";
+	};
+
+	pwm2_pd18_pins: pwm2-pd18-pins {
+		pins = "PD18";
 		function = "pwm2";
 	};
 
+	pwm3_pd19_pins: pwm2-pd19-pins {
+		pins = "PD19";
+		function = "pwm3";
+	};
+
+	pwm4_pd20_pins: pwm4-pd20-pins {
+		pins = "PD20";
+		function = "pwm4";
+	};
+
+	/omit-if-no-ref/
+	pwm5_pd21_pins: pwm5-pd21-pins {
+		pins = "PD21";
+		function = "pwm5";
+	};
+
+	pwm6_pd9_pins: pwm6-pd9-pins {
+		pins = "PD9";
+		function = "pwm6";
+	};
+
+	/omit-if-no-ref/
 	pwm7_pd22_pins: pwm7-pd22-pins {
 		pins = "PD22";
 		function = "pwm7";
+	};
+
+	ledc_pe5_pin: ledc-pe5-pin {
+		pins = "PE5";
+		function = "ledc";
 	};
 };
 
 &pwm {
 	status = "okay";
+};
+
+&ledc {
+	pinctrl-0 = <&ledc_pe5_pin>;
+	pinctrl-names = "default";
+	status = "okay";
+	allwinner,pixel-format = "grb";
+	allwinner,t0h-ns = "320";
+	allwinner,t0l-ns = "800";
+	allwinner,t1h-ns = "840";
+	allwinner,t1l-ns = "400";
+	allwinner,treset-ns = "300000";
+	label = "underglow:ledc";
 };
 
 &uart0 {
@@ -181,18 +348,32 @@
 &mmc1 {
 	pinctrl-0 = <&mmc1_pins>;
 	pinctrl-names = "default";
+
+	/* SDIO to WiFi module */
 	vmmc-supply = <&reg_3v3>;
-	non-removable;
-	bus-width = <4>;
 	mmc-pwrseq = <&wifi_pwrseq>;
+	bus-width = <4>;
+	non-removable;
 	status = "okay";
 
-	rtl8189ftv: wifi@1 {
+	/*
+	 * Explicitly define the sdio device, so that we can add an ethernet
+	 * alias for it (which e.g. makes u-boot set a mac-address).
+	 */
+	brcm4329: sdio_wifi@1 {
 		reg = <1>;
+		compatible = "brcm,bcm4329-fmac";
 		interrupt-parent = <&pio>;
 		interrupts = <6 10 IRQ_TYPE_LEVEL_LOW>; /* PG10 = WL_WAKE_AP */
 		interrupt-names = "host-wake";
 	};
+
+	//rtl8189ftv: wifi@1 {
+	//	reg = <1>;
+	//	interrupt-parent = <&pio>;
+	//	interrupts = <6 10 IRQ_TYPE_LEVEL_LOW>; /* PG10 = WL_WAKE_AP */
+	//	interrupt-names = "host-wake";
+	//};
 };
 
 /* The USB-C socket has its CC pins pulled to GND, so is hardwired as a UFP. */

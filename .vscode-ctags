@@ -1,0 +1,123 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/connorrigby/workspace/connorrigby/nerves_system_underglow3/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+ccu	uboot/sunxi-d1s-t113.dtsi	/^		ccu: clock-controller@2001000 {$/;"	l
+clk_pg11_pin	uboot/sunxi-d1s-t113.dtsi	/^			clk_pg11_pin: clk-pg11-pin {$/;"	l	label:pio
+cpu0	uboot/sun8i-t113s.dtsi	/^		cpu0: cpu@0 {$/;"	l
+cpu1	uboot/sun8i-t113s.dtsi	/^		cpu1: cpu@1 {$/;"	l
+dcxo	uboot/sunxi-d1s-t113.dtsi	/^	dcxo: dcxo-clk {$/;"	l
+de	uboot/sunxi-d1s-t113.dtsi	/^	de: display-engine {$/;"	l
+display_clocks	uboot/sunxi-d1s-t113.dtsi	/^		display_clocks: clock-controller@5000000 {$/;"	l
+dma	uboot/sunxi-d1s-t113.dtsi	/^		dma: dma-controller@3002000 {$/;"	l
+dmic	uboot/sunxi-d1s-t113.dtsi	/^		dmic: dmic@2031000 {$/;"	l
+dphy	uboot/sunxi-d1s-t113.dtsi	/^		dphy: phy@5451000 {$/;"	l
+dsi	uboot/sunxi-d1s-t113.dtsi	/^		dsi: dsi@5450000 {$/;"	l
+dsi_4lane_pins	uboot/sunxi-d1s-t113.dtsi	/^			dsi_4lane_pins: dsi-4lane-pins {$/;"	l	label:pio
+dsi_in_tcon_lcd0	uboot/sunxi-d1s-t113.dtsi	/^				dsi_in_tcon_lcd0: endpoint {$/;"	l	label:dsi
+dsp_wdt	uboot/sunxi-d1-t113.dtsi	/^		dsp_wdt: watchdog@1700400 {$/;"	l
+ehci0	uboot/sunxi-d1s-t113.dtsi	/^		ehci0: usb@4101000 {$/;"	l
+ehci1	uboot/sunxi-d1s-t113.dtsi	/^		ehci1: usb@4200000 {$/;"	l
+emac	uboot/sunxi-d1s-t113.dtsi	/^		emac: ethernet@4500000 {$/;"	l
+gic	uboot/sun8i-t113s.dtsi	/^	gic: interrupt-controller@1c81000 {$/;"	l
+i2c0	uboot/sunxi-d1s-t113.dtsi	/^		i2c0: i2c@2502000 {$/;"	l
+i2c1	uboot/sunxi-d1s-t113.dtsi	/^		i2c1: i2c@2502400 {$/;"	l
+i2c2	uboot/sunxi-d1s-t113.dtsi	/^		i2c2: i2c@2502800 {$/;"	l
+i2c2_pe12_pins	linux/sun8i-t113-ConeRGB-underglow3.dts	/^	i2c2_pe12_pins: i2c2-pe12-pins {$/;"	l
+i2c2_pe12_pins	uboot/sun8i-t113-ConeRGB-underglow3.dts	/^	i2c2_pe12_pins: i2c2-pe12-pins {$/;"	l
+i2c3	uboot/sunxi-d1s-t113.dtsi	/^		i2c3: i2c@2502c00 {$/;"	l
+i2s1	uboot/sunxi-d1s-t113.dtsi	/^		i2s1: i2s@2033000 {$/;"	l
+i2s2	uboot/sunxi-d1s-t113.dtsi	/^		i2s2: i2s@2034000 {$/;"	l
+lcd_rgb666_pins	uboot/sunxi-d1s-t113.dtsi	/^			lcd_rgb666_pins: lcd-rgb666-pins {$/;"	l	label:pio
+ledc_pe5_pin	linux/sun8i-t113-ConeRGB-underglow3.dts	/^	ledc_pe5_pin: ledc-pe5-pin {$/;"	l
+mbus	uboot/sunxi-d1s-t113.dtsi	/^		mbus: dram-controller@3102000 {$/;"	l
+mdio	uboot/sunxi-d1s-t113.dtsi	/^			mdio: mdio {$/;"	l	label:emac
+mixer0	uboot/sunxi-d1s-t113.dtsi	/^		mixer0: mixer@5100000 {$/;"	l
+mixer0_out	uboot/sunxi-d1s-t113.dtsi	/^				mixer0_out: port@1 {$/;"	l	label:mixer0
+mixer0_out_tcon_top_mixer0	uboot/sunxi-d1s-t113.dtsi	/^					mixer0_out_tcon_top_mixer0: endpoint {$/;"	l	label:mixer0.mixer0_out
+mixer1	uboot/sunxi-d1s-t113.dtsi	/^		mixer1: mixer@5200000 {$/;"	l
+mixer1_out	uboot/sunxi-d1s-t113.dtsi	/^				mixer1_out: port@1 {$/;"	l	label:mixer1
+mixer1_out_tcon_top_mixer1	uboot/sunxi-d1s-t113.dtsi	/^					mixer1_out_tcon_top_mixer1: endpoint {$/;"	l	label:mixer1.mixer1_out
+mmc0	uboot/sunxi-d1s-t113.dtsi	/^		mmc0: mmc@4020000 {$/;"	l
+mmc0_pins	uboot/sunxi-d1s-t113.dtsi	/^			mmc0_pins: mmc0-pins {$/;"	l	label:pio
+mmc1	uboot/sunxi-d1s-t113.dtsi	/^		mmc1: mmc@4021000 {$/;"	l
+mmc1_pins	uboot/sunxi-d1s-t113.dtsi	/^			mmc1_pins: mmc1-pins {$/;"	l	label:pio
+mmc2	uboot/sunxi-d1s-t113.dtsi	/^		mmc2: mmc@4022000 {$/;"	l
+mmc2_pins	uboot/sunxi-d1s-t113.dtsi	/^			mmc2_pins: mmc2-pins {$/;"	l	label:pio
+ohci0	uboot/sunxi-d1s-t113.dtsi	/^		ohci0: usb@4101400 {$/;"	l
+ohci1	uboot/sunxi-d1s-t113.dtsi	/^		ohci1: usb@4200400 {$/;"	l
+pio	uboot/sunxi-d1s-t113.dtsi	/^		pio: pinctrl@2000000 {$/;"	l
+ppu	uboot/sunxi-d1s-t113.dtsi	/^		ppu: power-controller@7001000 {$/;"	l
+pwm0_pd16_pins	linux/sun8i-t113-ConeRGB-underglow3.dts	/^	pwm0_pd16_pins: pwm0-pd16-pins {$/;"	l
+pwm1_pd17_pins	linux/sun8i-t113-ConeRGB-underglow3.dts	/^	pwm1_pd17_pins: pwm1-pd16-pins {$/;"	l
+pwm2_pd18_pins	linux/sun8i-t113-ConeRGB-underglow3.dts	/^	pwm2_pd18_pins: pwm2-pd18-pins {$/;"	l
+pwm3_pd19_pins	linux/sun8i-t113-ConeRGB-underglow3.dts	/^	pwm3_pd19_pins: pwm2-pd19-pins {$/;"	l
+pwm4_pd20_pins	linux/sun8i-t113-ConeRGB-underglow3.dts	/^	pwm4_pd20_pins: pwm4-pd20-pins {$/;"	l
+pwm5_pd21_pins	linux/sun8i-t113-ConeRGB-underglow3.dts	/^	pwm5_pd21_pins: pwm5-pd21-pins {$/;"	l
+pwm6_pd9_pins	linux/sun8i-t113-ConeRGB-underglow3.dts	/^	pwm6_pd9_pins: pwm6-pd9-pins {$/;"	l
+pwm7_pd22_pins	linux/sun8i-t113-ConeRGB-underglow3.dts	/^	pwm7_pd22_pins: pwm7-pd22-pins {$/;"	l
+r_ccu	uboot/sunxi-d1s-t113.dtsi	/^		r_ccu: clock-controller@7010000 {$/;"	l
+reg_3v3	linux/sun8i-t113-ConeRGB-underglow3.dts	/^	reg_3v3: regulator-3v3 {$/;"	l
+reg_3v3	uboot/sun8i-t113-ConeRGB-underglow3.dts	/^	reg_3v3: regulator-3v3 {$/;"	l
+reg_vcc5v	linux/sun8i-t113-ConeRGB-underglow3.dts	/^	reg_vcc5v: regulator-5v {$/;"	l
+reg_vcc5v	uboot/sun8i-t113-ConeRGB-underglow3.dts	/^	reg_vcc5v: regulator-5v {$/;"	l
+reg_vcc_core	linux/sun8i-t113-ConeRGB-underglow3.dts	/^	reg_vcc_core: regulator-core {$/;"	l
+reg_vcc_core	uboot/sun8i-t113-ConeRGB-underglow3.dts	/^	reg_vcc_core: regulator-core {$/;"	l
+rgmii_pe_pins	uboot/sunxi-d1s-t113.dtsi	/^			rgmii_pe_pins: rgmii-pe-pins {$/;"	l	label:pio
+rmii_pe_pins	uboot/sunxi-d1s-t113.dtsi	/^			rmii_pe_pins: rmii-pe-pins {$/;"	l	label:pio
+rtc	uboot/sunxi-d1s-t113.dtsi	/^		rtc: rtc@7090000 {$/;"	l
+rtl8189ftv	linux/sun8i-t113-ConeRGB-underglow3.dts	/^	rtl8189ftv: wifi@1 {$/;"	l
+rtl8189ftv	uboot/sun8i-t113-ConeRGB-underglow3.dts	/^	rtl8189ftv: wifi@1 {$/;"	l
+sid	uboot/sunxi-d1s-t113.dtsi	/^		sid: efuse@3006000 {$/;"	l
+syscon	uboot/sunxi-d1s-t113.dtsi	/^		syscon: syscon@3000000 {$/;"	l
+tcon_lcd0	uboot/sunxi-d1s-t113.dtsi	/^		tcon_lcd0: lcd-controller@5461000 {$/;"	l
+tcon_lcd0_in	uboot/sunxi-d1s-t113.dtsi	/^				tcon_lcd0_in: port@0 {$/;"	l	label:tcon_lcd0
+tcon_lcd0_in_tcon_top_mixer0	uboot/sunxi-d1s-t113.dtsi	/^					tcon_lcd0_in_tcon_top_mixer0: endpoint@0 {$/;"	l	label:tcon_lcd0.tcon_lcd0_in
+tcon_lcd0_in_tcon_top_mixer1	uboot/sunxi-d1s-t113.dtsi	/^					tcon_lcd0_in_tcon_top_mixer1: endpoint@1 {$/;"	l	label:tcon_lcd0.tcon_lcd0_in
+tcon_lcd0_out	uboot/sunxi-d1s-t113.dtsi	/^				tcon_lcd0_out: port@1 {$/;"	l	label:tcon_lcd0
+tcon_lcd0_out_dsi	uboot/sunxi-d1s-t113.dtsi	/^					tcon_lcd0_out_dsi: endpoint@1 {$/;"	l	label:tcon_lcd0.tcon_lcd0_out
+tcon_top	uboot/sunxi-d1s-t113.dtsi	/^		tcon_top: tcon-top@5460000 {$/;"	l
+tcon_top_hdmi_in	uboot/sunxi-d1s-t113.dtsi	/^				tcon_top_hdmi_in: port@4 {$/;"	l	label:tcon_top
+tcon_top_hdmi_in_tcon_tv0	uboot/sunxi-d1s-t113.dtsi	/^					tcon_top_hdmi_in_tcon_tv0: endpoint {$/;"	l	label:tcon_top.tcon_top_hdmi_in
+tcon_top_hdmi_out	uboot/sunxi-d1s-t113.dtsi	/^				tcon_top_hdmi_out: port@5 {$/;"	l	label:tcon_top
+tcon_top_mixer0_in	uboot/sunxi-d1s-t113.dtsi	/^				tcon_top_mixer0_in: port@0 {$/;"	l	label:tcon_top
+tcon_top_mixer0_in_mixer0	uboot/sunxi-d1s-t113.dtsi	/^					tcon_top_mixer0_in_mixer0: endpoint {$/;"	l	label:tcon_top.tcon_top_mixer0_in
+tcon_top_mixer0_out	uboot/sunxi-d1s-t113.dtsi	/^				tcon_top_mixer0_out: port@1 {$/;"	l	label:tcon_top
+tcon_top_mixer0_out_tcon_lcd0	uboot/sunxi-d1s-t113.dtsi	/^					tcon_top_mixer0_out_tcon_lcd0: endpoint@0 {$/;"	l	label:tcon_top.tcon_top_mixer0_out
+tcon_top_mixer0_out_tcon_tv0	uboot/sunxi-d1s-t113.dtsi	/^					tcon_top_mixer0_out_tcon_tv0: endpoint@2 {$/;"	l	label:tcon_top.tcon_top_mixer0_out
+tcon_top_mixer1_in	uboot/sunxi-d1s-t113.dtsi	/^				tcon_top_mixer1_in: port@2 {$/;"	l	label:tcon_top
+tcon_top_mixer1_in_mixer1	uboot/sunxi-d1s-t113.dtsi	/^					tcon_top_mixer1_in_mixer1: endpoint@1 {$/;"	l	label:tcon_top.tcon_top_mixer1_in
+tcon_top_mixer1_out	uboot/sunxi-d1s-t113.dtsi	/^				tcon_top_mixer1_out: port@3 {$/;"	l	label:tcon_top
+tcon_top_mixer1_out_tcon_lcd0	uboot/sunxi-d1s-t113.dtsi	/^					tcon_top_mixer1_out_tcon_lcd0: endpoint@0 {$/;"	l	label:tcon_top.tcon_top_mixer1_out
+tcon_top_mixer1_out_tcon_tv0	uboot/sunxi-d1s-t113.dtsi	/^					tcon_top_mixer1_out_tcon_tv0: endpoint@2 {$/;"	l	label:tcon_top.tcon_top_mixer1_out
+tcon_tv0	uboot/sunxi-d1s-t113.dtsi	/^		tcon_tv0: lcd-controller@5470000 {$/;"	l
+tcon_tv0_in	uboot/sunxi-d1s-t113.dtsi	/^				tcon_tv0_in: port@0 {$/;"	l	label:tcon_tv0
+tcon_tv0_in_tcon_top_mixer0	uboot/sunxi-d1s-t113.dtsi	/^					tcon_tv0_in_tcon_top_mixer0: endpoint@0 {$/;"	l	label:tcon_tv0.tcon_tv0_in
+tcon_tv0_in_tcon_top_mixer1	uboot/sunxi-d1s-t113.dtsi	/^					tcon_tv0_in_tcon_top_mixer1: endpoint@1 {$/;"	l	label:tcon_tv0.tcon_tv0_in
+tcon_tv0_out	uboot/sunxi-d1s-t113.dtsi	/^				tcon_tv0_out: port@1 {$/;"	l	label:tcon_tv0
+tcon_tv0_out_tcon_top_hdmi	uboot/sunxi-d1s-t113.dtsi	/^					tcon_tv0_out_tcon_top_hdmi: endpoint {$/;"	l	label:tcon_tv0.tcon_tv0_out
+timer	uboot/sunxi-d1s-t113.dtsi	/^		timer: timer@2050000 {$/;"	l
+uart0	uboot/sunxi-d1s-t113.dtsi	/^		uart0: serial@2500000 {$/;"	l
+uart0_pe2_pins	linux/sun8i-t113-ConeRGB-underglow3.dts	/^	uart0_pe2_pins: uart0-pe2-pins {$/;"	l
+uart0_pe2_pins	uboot/sun8i-t113-ConeRGB-underglow3.dts	/^	uart0_pe2_pins: uart0-pe2-pins {$/;"	l
+uart0_pe2_pins	uboot/sunxi-d1s-t113.dtsi	/^			uart0_pe2_pins: uart0-pe2-pins {$/;"	l	label:pio
+uart1	uboot/sunxi-d1s-t113.dtsi	/^		uart1: serial@2500400 {$/;"	l
+uart1_pg6_pins	uboot/sunxi-d1s-t113.dtsi	/^			uart1_pg6_pins: uart1-pg6-pins {$/;"	l	label:pio
+uart1_pg8_rts_cts_pins	uboot/sunxi-d1s-t113.dtsi	/^			uart1_pg8_rts_cts_pins: uart1-pg8-rts-cts-pins {$/;"	l	label:pio
+uart2	uboot/sunxi-d1s-t113.dtsi	/^		uart2: serial@2500800 {$/;"	l
+uart3	uboot/sunxi-d1s-t113.dtsi	/^		uart3: serial@2500c00 {$/;"	l
+uart3_pb_pins	uboot/sunxi-d1s-t113.dtsi	/^			uart3_pb_pins: uart3-pb-pins {$/;"	l	label:pio
+uart4	uboot/sunxi-d1s-t113.dtsi	/^		uart4: serial@2501000 {$/;"	l
+uart5	uboot/sunxi-d1s-t113.dtsi	/^		uart5: serial@2501400 {$/;"	l
+usb_otg	uboot/sunxi-d1s-t113.dtsi	/^		usb_otg: usb@4100000 {$/;"	l
+usbphy	uboot/sunxi-d1s-t113.dtsi	/^		usbphy: phy@4100400 {$/;"	l
+wdt	uboot/sunxi-d1s-t113.dtsi	/^		wdt: watchdog@20500a0 {$/;"	l
+wifi_pwrseq	linux/sun8i-t113-ConeRGB-underglow3.dts	/^	wifi_pwrseq: wifi-pwrseq {$/;"	l
+wifi_pwrseq	uboot/sun8i-t113-ConeRGB-underglow3.dts	/^	wifi_pwrseq: wifi-pwrseq {$/;"	l

@@ -1,2419 +1,2406 @@
 &ledc {
-	pinctrl-0 = <&ledc_pe5_pin>;
-	pinctrl-names = "default";
-	reg = <0x2008000 0x14>;
-	status = "okay";
-	allwinner,pixel-format = "grb";
-	allwinner,t0h-ns = "320";
-	allwinner,t0l-ns = "800";
-	allwinner,t1h-ns = "840";
-	allwinner,t1l-ns = "400";
-	allwinner,treset-ns = "300000";
-
-	multi-led@0 {
-		reg = <0x0>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@1 {
-		reg = <0x1>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@2 {
-		reg = <0x2>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@3 {
-		reg = <0x3>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@4 {
-		reg = <0x4>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@5 {
-		reg = <0x5>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@6 {
-		reg = <0x6>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@7 {
-		reg = <0x7>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@8 {
-		reg = <0x8>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@9 {
-		reg = <0x9>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@A {
-		reg = <0xA>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@B {
-		reg = <0xB>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@C {
-		reg = <0xC>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@D {
-		reg = <0xD>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@E {
-		reg = <0xE>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@F {
-		reg = <0xF>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@10 {
-		reg = <0x10>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@11 {
-		reg = <0x11>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@12 {
-		reg = <0x12>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@13 {
-		reg = <0x13>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@14 {
-		reg = <0x14>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@15 {
-		reg = <0x15>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@16 {
-		reg = <0x16>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@17 {
-		reg = <0x17>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@18 {
-		reg = <0x18>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@19 {
-		reg = <0x19>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@1A {
-		reg = <0x1A>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@1B {
-		reg = <0x1B>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@1C {
-		reg = <0x1C>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@1D {
-		reg = <0x1D>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@1E {
-		reg = <0x1E>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@1F {
-		reg = <0x1F>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@20 {
-		reg = <0x20>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@21 {
-		reg = <0x21>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@22 {
-		reg = <0x22>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@23 {
-		reg = <0x23>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@24 {
-		reg = <0x24>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@25 {
-		reg = <0x25>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@26 {
-		reg = <0x26>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@27 {
-		reg = <0x27>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@28 {
-		reg = <0x28>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@29 {
-		reg = <0x29>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@2A {
-		reg = <0x2A>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@2B {
-		reg = <0x2B>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@2C {
-		reg = <0x2C>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@2D {
-		reg = <0x2D>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@2E {
-		reg = <0x2E>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@2F {
-		reg = <0x2F>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@30 {
-		reg = <0x30>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@31 {
-		reg = <0x31>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@32 {
-		reg = <0x32>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@33 {
-		reg = <0x33>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@34 {
-		reg = <0x34>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@35 {
-		reg = <0x35>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@36 {
-		reg = <0x36>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@37 {
-		reg = <0x37>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@38 {
-		reg = <0x38>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@39 {
-		reg = <0x39>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@3A {
-		reg = <0x3A>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@3B {
-		reg = <0x3B>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@3C {
-		reg = <0x3C>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@3D {
-		reg = <0x3D>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@3E {
-		reg = <0x3E>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@3F {
-		reg = <0x3F>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@40 {
-		reg = <0x40>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@41 {
-		reg = <0x41>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@42 {
-		reg = <0x42>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@43 {
-		reg = <0x43>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@44 {
-		reg = <0x44>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@45 {
-		reg = <0x45>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@46 {
-		reg = <0x46>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@47 {
-		reg = <0x47>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@48 {
-		reg = <0x48>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@49 {
-		reg = <0x49>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@4A {
-		reg = <0x4A>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@4B {
-		reg = <0x4B>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@4C {
-		reg = <0x4C>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@4D {
-		reg = <0x4D>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@4E {
-		reg = <0x4E>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@4F {
-		reg = <0x4F>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@50 {
-		reg = <0x50>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@51 {
-		reg = <0x51>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@52 {
-		reg = <0x52>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@53 {
-		reg = <0x53>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@54 {
-		reg = <0x54>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@55 {
-		reg = <0x55>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@56 {
-		reg = <0x56>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@57 {
-		reg = <0x57>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@58 {
-		reg = <0x58>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@59 {
-		reg = <0x59>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@5A {
-		reg = <0x5A>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@5B {
-		reg = <0x5B>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@5C {
-		reg = <0x5C>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@5D {
-		reg = <0x5D>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@5E {
-		reg = <0x5E>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@5F {
-		reg = <0x5F>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@60 {
-		reg = <0x60>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@61 {
-		reg = <0x61>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@62 {
-		reg = <0x62>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@63 {
-		reg = <0x63>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@64 {
-		reg = <0x64>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@65 {
-		reg = <0x65>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@66 {
-		reg = <0x66>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@67 {
-		reg = <0x67>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@68 {
-		reg = <0x68>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@69 {
-		reg = <0x69>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@6A {
-		reg = <0x6A>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@6B {
-		reg = <0x6B>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@6C {
-		reg = <0x6C>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@6D {
-		reg = <0x6D>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@6E {
-		reg = <0x6E>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@6F {
-		reg = <0x6F>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@70 {
-		reg = <0x70>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@71 {
-		reg = <0x71>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@72 {
-		reg = <0x72>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@73 {
-		reg = <0x73>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@74 {
-		reg = <0x74>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@75 {
-		reg = <0x75>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@76 {
-		reg = <0x76>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@77 {
-		reg = <0x77>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@78 {
-		reg = <0x78>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@79 {
-		reg = <0x79>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@7A {
-		reg = <0x7A>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@7B {
-		reg = <0x7B>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@7C {
-		reg = <0x7C>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@7D {
-		reg = <0x7D>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@7E {
-		reg = <0x7E>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@7F {
-		reg = <0x7F>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@80 {
-		reg = <0x80>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@81 {
-		reg = <0x81>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@82 {
-		reg = <0x82>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@83 {
-		reg = <0x83>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@84 {
-		reg = <0x84>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@85 {
-		reg = <0x85>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@86 {
-		reg = <0x86>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@87 {
-		reg = <0x87>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@88 {
-		reg = <0x88>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@89 {
-		reg = <0x89>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@8A {
-		reg = <0x8A>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@8B {
-		reg = <0x8B>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@8C {
-		reg = <0x8C>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@8D {
-		reg = <0x8D>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@8E {
-		reg = <0x8E>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@8F {
-		reg = <0x8F>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@90 {
-		reg = <0x90>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@91 {
-		reg = <0x91>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@92 {
-		reg = <0x92>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@93 {
-		reg = <0x93>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@94 {
-		reg = <0x94>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@95 {
-		reg = <0x95>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@96 {
-		reg = <0x96>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@97 {
-		reg = <0x97>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@98 {
-		reg = <0x98>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@99 {
-		reg = <0x99>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@9A {
-		reg = <0x9A>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@9B {
-		reg = <0x9B>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@9C {
-		reg = <0x9C>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@9D {
-		reg = <0x9D>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@9E {
-		reg = <0x9E>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@9F {
-		reg = <0x9F>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@A0 {
-		reg = <0xA0>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@A1 {
-		reg = <0xA1>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@A2 {
-		reg = <0xA2>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@A3 {
-		reg = <0xA3>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@A4 {
-		reg = <0xA4>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@A5 {
-		reg = <0xA5>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@A6 {
-		reg = <0xA6>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@A7 {
-		reg = <0xA7>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@A8 {
-		reg = <0xA8>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@A9 {
-		reg = <0xA9>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@AA {
-		reg = <0xAA>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@AB {
-		reg = <0xAB>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@AC {
-		reg = <0xAC>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@AD {
-		reg = <0xAD>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@AE {
-		reg = <0xAE>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@AF {
-		reg = <0xAF>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@B0 {
-		reg = <0xB0>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@B1 {
-		reg = <0xB1>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@B2 {
-		reg = <0xB2>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@B3 {
-		reg = <0xB3>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@B4 {
-		reg = <0xB4>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@B5 {
-		reg = <0xB5>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@B6 {
-		reg = <0xB6>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@B7 {
-		reg = <0xB7>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@B8 {
-		reg = <0xB8>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@B9 {
-		reg = <0xB9>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@BA {
-		reg = <0xBA>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@BB {
-		reg = <0xBB>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@BC {
-		reg = <0xBC>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@BD {
-		reg = <0xBD>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@BE {
-		reg = <0xBE>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@BF {
-		reg = <0xBF>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@C0 {
-		reg = <0xC0>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@C1 {
-		reg = <0xC1>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@C2 {
-		reg = <0xC2>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@C3 {
-		reg = <0xC3>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@C4 {
-		reg = <0xC4>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@C5 {
-		reg = <0xC5>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@C6 {
-		reg = <0xC6>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@C7 {
-		reg = <0xC7>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@C8 {
-		reg = <0xC8>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@C9 {
-		reg = <0xC9>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@CA {
-		reg = <0xCA>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@CB {
-		reg = <0xCB>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@CC {
-		reg = <0xCC>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@CD {
-		reg = <0xCD>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@CE {
-		reg = <0xCE>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@CF {
-		reg = <0xCF>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@D0 {
-		reg = <0xD0>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@D1 {
-		reg = <0xD1>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@D2 {
-		reg = <0xD2>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@D3 {
-		reg = <0xD3>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@D4 {
-		reg = <0xD4>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@D5 {
-		reg = <0xD5>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@D6 {
-		reg = <0xD6>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@D7 {
-		reg = <0xD7>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@D8 {
-		reg = <0xD8>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@D9 {
-		reg = <0xD9>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@DA {
-		reg = <0xDA>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@DB {
-		reg = <0xDB>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@DC {
-		reg = <0xDC>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@DD {
-		reg = <0xDD>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@DE {
-		reg = <0xDE>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@DF {
-		reg = <0xDF>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@E0 {
-		reg = <0xE0>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@E1 {
-		reg = <0xE1>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@E2 {
-		reg = <0xE2>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@E3 {
-		reg = <0xE3>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@E4 {
-		reg = <0xE4>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@E5 {
-		reg = <0xE5>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@E6 {
-		reg = <0xE6>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@E7 {
-		reg = <0xE7>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@E8 {
-		reg = <0xE8>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@E9 {
-		reg = <0xE9>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@EA {
-		reg = <0xEA>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@EB {
-		reg = <0xEB>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@EC {
-		reg = <0xEC>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@ED {
-		reg = <0xED>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@EE {
-		reg = <0xEE>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@EF {
-		reg = <0xEF>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@F0 {
-		reg = <0xF0>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@F1 {
-		reg = <0xF1>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@F2 {
-		reg = <0xF2>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@F3 {
-		reg = <0xF3>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@F4 {
-		reg = <0xF4>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@F5 {
-		reg = <0xF5>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@F6 {
-		reg = <0xF6>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@F7 {
-		reg = <0xF7>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@F8 {
-		reg = <0xF8>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@F9 {
-		reg = <0xF9>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@FA {
-		reg = <0xFA>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@FB {
-		reg = <0xFB>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@FC {
-		reg = <0xFC>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@FD {
-		reg = <0xFD>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@FE {
-		reg = <0xFE>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@FF {
-		reg = <0xFF>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@100 {
-		reg = <0x100>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@101 {
-		reg = <0x101>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@102 {
-		reg = <0x102>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@103 {
-		reg = <0x103>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@104 {
-		reg = <0x104>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@105 {
-		reg = <0x105>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@106 {
-		reg = <0x106>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@107 {
-		reg = <0x107>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@108 {
-		reg = <0x108>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@109 {
-		reg = <0x109>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@10A {
-		reg = <0x10A>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@10B {
-		reg = <0x10B>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@10C {
-		reg = <0x10C>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@10D {
-		reg = <0x10D>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@10E {
-		reg = <0x10E>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@10F {
-		reg = <0x10F>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@110 {
-		reg = <0x110>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@111 {
-		reg = <0x111>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@112 {
-		reg = <0x112>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@113 {
-		reg = <0x113>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@114 {
-		reg = <0x114>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@115 {
-		reg = <0x115>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@116 {
-		reg = <0x116>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@117 {
-		reg = <0x117>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@118 {
-		reg = <0x118>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@119 {
-		reg = <0x119>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@11A {
-		reg = <0x11A>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@11B {
-		reg = <0x11B>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@11C {
-		reg = <0x11C>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@11D {
-		reg = <0x11D>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@11E {
-		reg = <0x11E>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@11F {
-		reg = <0x11F>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@120 {
-		reg = <0x120>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@121 {
-		reg = <0x121>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@122 {
-		reg = <0x122>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@123 {
-		reg = <0x123>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@124 {
-		reg = <0x124>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@125 {
-		reg = <0x125>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@126 {
-		reg = <0x126>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@127 {
-		reg = <0x127>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@128 {
-		reg = <0x128>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@129 {
-		reg = <0x129>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@12A {
-		reg = <0x12A>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@12B {
-		reg = <0x12B>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@12C {
-		reg = <0x12C>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@12D {
-		reg = <0x12D>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@12E {
-		reg = <0x12E>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@12F {
-		reg = <0x12F>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@130 {
-		reg = <0x130>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@131 {
-		reg = <0x131>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@132 {
-		reg = <0x132>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@133 {
-		reg = <0x133>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@134 {
-		reg = <0x134>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@135 {
-		reg = <0x135>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@136 {
-		reg = <0x136>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@137 {
-		reg = <0x137>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@138 {
-		reg = <0x138>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@139 {
-		reg = <0x139>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@13A {
-		reg = <0x13A>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@13B {
-		reg = <0x13B>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@13C {
-		reg = <0x13C>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@13D {
-		reg = <0x13D>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@13E {
-		reg = <0x13E>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@13F {
-		reg = <0x13F>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@140 {
-		reg = <0x140>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@141 {
-		reg = <0x141>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@142 {
-		reg = <0x142>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@143 {
-		reg = <0x143>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@144 {
-		reg = <0x144>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@145 {
-		reg = <0x145>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@146 {
-		reg = <0x146>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@147 {
-		reg = <0x147>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@148 {
-		reg = <0x148>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@149 {
-		reg = <0x149>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@14A {
-		reg = <0x14A>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@14B {
-		reg = <0x14B>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@14C {
-		reg = <0x14C>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@14D {
-		reg = <0x14D>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@14E {
-		reg = <0x14E>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@14F {
-		reg = <0x14F>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@150 {
-		reg = <0x150>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@151 {
-		reg = <0x151>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@152 {
-		reg = <0x152>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@153 {
-		reg = <0x153>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@154 {
-		reg = <0x154>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@155 {
-		reg = <0x155>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@156 {
-		reg = <0x156>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@157 {
-		reg = <0x157>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@158 {
-		reg = <0x158>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@159 {
-		reg = <0x159>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@15A {
-		reg = <0x15A>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@15B {
-		reg = <0x15B>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@15C {
-		reg = <0x15C>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@15D {
-		reg = <0x15D>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@15E {
-		reg = <0x15E>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@15F {
-		reg = <0x15F>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@160 {
-		reg = <0x160>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@161 {
-		reg = <0x161>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@162 {
-		reg = <0x162>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@163 {
-		reg = <0x163>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@164 {
-		reg = <0x164>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@165 {
-		reg = <0x165>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@166 {
-		reg = <0x166>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@167 {
-		reg = <0x167>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@168 {
-		reg = <0x168>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@169 {
-		reg = <0x169>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@16A {
-		reg = <0x16A>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@16B {
-		reg = <0x16B>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@16C {
-		reg = <0x16C>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@16D {
-		reg = <0x16D>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@16E {
-		reg = <0x16E>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@16F {
-		reg = <0x16F>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@170 {
-		reg = <0x170>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@171 {
-		reg = <0x171>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@172 {
-		reg = <0x172>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@173 {
-		reg = <0x173>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@174 {
-		reg = <0x174>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@175 {
-		reg = <0x175>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@176 {
-		reg = <0x176>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@177 {
-		reg = <0x177>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@178 {
-		reg = <0x178>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@179 {
-		reg = <0x179>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@17A {
-		reg = <0x17A>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@17B {
-		reg = <0x17B>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@17C {
-		reg = <0x17C>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@17D {
-		reg = <0x17D>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@17E {
-		reg = <0x17E>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@17F {
-		reg = <0x17F>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@180 {
-		reg = <0x180>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@181 {
-		reg = <0x181>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@182 {
-		reg = <0x182>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@183 {
-		reg = <0x183>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@184 {
-		reg = <0x184>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@185 {
-		reg = <0x185>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@186 {
-		reg = <0x186>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@187 {
-		reg = <0x187>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@188 {
-		reg = <0x188>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@189 {
-		reg = <0x189>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@18A {
-		reg = <0x18A>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@18B {
-		reg = <0x18B>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@18C {
-		reg = <0x18C>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@18D {
-		reg = <0x18D>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@18E {
-		reg = <0x18E>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@18F {
-		reg = <0x18F>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
-	multi-led@190 {
-		reg = <0x190>;
-		color = <LED_COLOR_ID_RGB>;
-		function = LED_FUNCTION_STATUS;
-	};
-
+		multi-led@0 {
+			reg = <0x0>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+		multi-led@1 {
+			reg = <0x1>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@2 {
+			reg = <0x2>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@3 {
+			reg = <0x3>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@4 {
+			reg = <0x4>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@5 {
+			reg = <0x5>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@6 {
+			reg = <0x6>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@7 {
+			reg = <0x7>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@8 {
+			reg = <0x8>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@9 {
+			reg = <0x9>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@A {
+			reg = <0xA>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@B {
+			reg = <0xB>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@C {
+			reg = <0xC>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@D {
+			reg = <0xD>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@E {
+			reg = <0xE>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@F {
+			reg = <0xF>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@10 {
+			reg = <0x10>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@11 {
+			reg = <0x11>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@12 {
+			reg = <0x12>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@13 {
+			reg = <0x13>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@14 {
+			reg = <0x14>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@15 {
+			reg = <0x15>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@16 {
+			reg = <0x16>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@17 {
+			reg = <0x17>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@18 {
+			reg = <0x18>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@19 {
+			reg = <0x19>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@1A {
+			reg = <0x1A>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@1B {
+			reg = <0x1B>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@1C {
+			reg = <0x1C>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@1D {
+			reg = <0x1D>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@1E {
+			reg = <0x1E>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@1F {
+			reg = <0x1F>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@20 {
+			reg = <0x20>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@21 {
+			reg = <0x21>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@22 {
+			reg = <0x22>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@23 {
+			reg = <0x23>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@24 {
+			reg = <0x24>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@25 {
+			reg = <0x25>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@26 {
+			reg = <0x26>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@27 {
+			reg = <0x27>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@28 {
+			reg = <0x28>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@29 {
+			reg = <0x29>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@2A {
+			reg = <0x2A>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@2B {
+			reg = <0x2B>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@2C {
+			reg = <0x2C>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@2D {
+			reg = <0x2D>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@2E {
+			reg = <0x2E>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@2F {
+			reg = <0x2F>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@30 {
+			reg = <0x30>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@31 {
+			reg = <0x31>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@32 {
+			reg = <0x32>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@33 {
+			reg = <0x33>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@34 {
+			reg = <0x34>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@35 {
+			reg = <0x35>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@36 {
+			reg = <0x36>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@37 {
+			reg = <0x37>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@38 {
+			reg = <0x38>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@39 {
+			reg = <0x39>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@3A {
+			reg = <0x3A>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@3B {
+			reg = <0x3B>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@3C {
+			reg = <0x3C>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@3D {
+			reg = <0x3D>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@3E {
+			reg = <0x3E>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@3F {
+			reg = <0x3F>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@40 {
+			reg = <0x40>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@41 {
+			reg = <0x41>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@42 {
+			reg = <0x42>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@43 {
+			reg = <0x43>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@44 {
+			reg = <0x44>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@45 {
+			reg = <0x45>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@46 {
+			reg = <0x46>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@47 {
+			reg = <0x47>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@48 {
+			reg = <0x48>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@49 {
+			reg = <0x49>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@4A {
+			reg = <0x4A>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@4B {
+			reg = <0x4B>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@4C {
+			reg = <0x4C>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@4D {
+			reg = <0x4D>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@4E {
+			reg = <0x4E>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@4F {
+			reg = <0x4F>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@50 {
+			reg = <0x50>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@51 {
+			reg = <0x51>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@52 {
+			reg = <0x52>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@53 {
+			reg = <0x53>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@54 {
+			reg = <0x54>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@55 {
+			reg = <0x55>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@56 {
+			reg = <0x56>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@57 {
+			reg = <0x57>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@58 {
+			reg = <0x58>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@59 {
+			reg = <0x59>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@5A {
+			reg = <0x5A>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@5B {
+			reg = <0x5B>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@5C {
+			reg = <0x5C>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@5D {
+			reg = <0x5D>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@5E {
+			reg = <0x5E>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@5F {
+			reg = <0x5F>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@60 {
+			reg = <0x60>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@61 {
+			reg = <0x61>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@62 {
+			reg = <0x62>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@63 {
+			reg = <0x63>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@64 {
+			reg = <0x64>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@65 {
+			reg = <0x65>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@66 {
+			reg = <0x66>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@67 {
+			reg = <0x67>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@68 {
+			reg = <0x68>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@69 {
+			reg = <0x69>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@6A {
+			reg = <0x6A>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@6B {
+			reg = <0x6B>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@6C {
+			reg = <0x6C>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@6D {
+			reg = <0x6D>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@6E {
+			reg = <0x6E>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@6F {
+			reg = <0x6F>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@70 {
+			reg = <0x70>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@71 {
+			reg = <0x71>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@72 {
+			reg = <0x72>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@73 {
+			reg = <0x73>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@74 {
+			reg = <0x74>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@75 {
+			reg = <0x75>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@76 {
+			reg = <0x76>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@77 {
+			reg = <0x77>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@78 {
+			reg = <0x78>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@79 {
+			reg = <0x79>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@7A {
+			reg = <0x7A>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@7B {
+			reg = <0x7B>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@7C {
+			reg = <0x7C>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@7D {
+			reg = <0x7D>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@7E {
+			reg = <0x7E>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@7F {
+			reg = <0x7F>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@80 {
+			reg = <0x80>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@81 {
+			reg = <0x81>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@82 {
+			reg = <0x82>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@83 {
+			reg = <0x83>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@84 {
+			reg = <0x84>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@85 {
+			reg = <0x85>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@86 {
+			reg = <0x86>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@87 {
+			reg = <0x87>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@88 {
+			reg = <0x88>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@89 {
+			reg = <0x89>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@8A {
+			reg = <0x8A>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@8B {
+			reg = <0x8B>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@8C {
+			reg = <0x8C>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@8D {
+			reg = <0x8D>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@8E {
+			reg = <0x8E>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@8F {
+			reg = <0x8F>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@90 {
+			reg = <0x90>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@91 {
+			reg = <0x91>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@92 {
+			reg = <0x92>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@93 {
+			reg = <0x93>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@94 {
+			reg = <0x94>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@95 {
+			reg = <0x95>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@96 {
+			reg = <0x96>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@97 {
+			reg = <0x97>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@98 {
+			reg = <0x98>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@99 {
+			reg = <0x99>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@9A {
+			reg = <0x9A>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@9B {
+			reg = <0x9B>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@9C {
+			reg = <0x9C>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@9D {
+			reg = <0x9D>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@9E {
+			reg = <0x9E>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@9F {
+			reg = <0x9F>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@A0 {
+			reg = <0xA0>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@A1 {
+			reg = <0xA1>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@A2 {
+			reg = <0xA2>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@A3 {
+			reg = <0xA3>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@A4 {
+			reg = <0xA4>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@A5 {
+			reg = <0xA5>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@A6 {
+			reg = <0xA6>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@A7 {
+			reg = <0xA7>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@A8 {
+			reg = <0xA8>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@A9 {
+			reg = <0xA9>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@AA {
+			reg = <0xAA>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@AB {
+			reg = <0xAB>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@AC {
+			reg = <0xAC>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@AD {
+			reg = <0xAD>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@AE {
+			reg = <0xAE>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@AF {
+			reg = <0xAF>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@B0 {
+			reg = <0xB0>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@B1 {
+			reg = <0xB1>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@B2 {
+			reg = <0xB2>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@B3 {
+			reg = <0xB3>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@B4 {
+			reg = <0xB4>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@B5 {
+			reg = <0xB5>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@B6 {
+			reg = <0xB6>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@B7 {
+			reg = <0xB7>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@B8 {
+			reg = <0xB8>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@B9 {
+			reg = <0xB9>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@BA {
+			reg = <0xBA>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@BB {
+			reg = <0xBB>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@BC {
+			reg = <0xBC>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@BD {
+			reg = <0xBD>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@BE {
+			reg = <0xBE>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@BF {
+			reg = <0xBF>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@C0 {
+			reg = <0xC0>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@C1 {
+			reg = <0xC1>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@C2 {
+			reg = <0xC2>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@C3 {
+			reg = <0xC3>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@C4 {
+			reg = <0xC4>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@C5 {
+			reg = <0xC5>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@C6 {
+			reg = <0xC6>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@C7 {
+			reg = <0xC7>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@C8 {
+			reg = <0xC8>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@C9 {
+			reg = <0xC9>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@CA {
+			reg = <0xCA>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@CB {
+			reg = <0xCB>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@CC {
+			reg = <0xCC>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@CD {
+			reg = <0xCD>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@CE {
+			reg = <0xCE>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@CF {
+			reg = <0xCF>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@D0 {
+			reg = <0xD0>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@D1 {
+			reg = <0xD1>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@D2 {
+			reg = <0xD2>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@D3 {
+			reg = <0xD3>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@D4 {
+			reg = <0xD4>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@D5 {
+			reg = <0xD5>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@D6 {
+			reg = <0xD6>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@D7 {
+			reg = <0xD7>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@D8 {
+			reg = <0xD8>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@D9 {
+			reg = <0xD9>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@DA {
+			reg = <0xDA>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@DB {
+			reg = <0xDB>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@DC {
+			reg = <0xDC>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@DD {
+			reg = <0xDD>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@DE {
+			reg = <0xDE>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@DF {
+			reg = <0xDF>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@E0 {
+			reg = <0xE0>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@E1 {
+			reg = <0xE1>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@E2 {
+			reg = <0xE2>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@E3 {
+			reg = <0xE3>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@E4 {
+			reg = <0xE4>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@E5 {
+			reg = <0xE5>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@E6 {
+			reg = <0xE6>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@E7 {
+			reg = <0xE7>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@E8 {
+			reg = <0xE8>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@E9 {
+			reg = <0xE9>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@EA {
+			reg = <0xEA>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@EB {
+			reg = <0xEB>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@EC {
+			reg = <0xEC>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@ED {
+			reg = <0xED>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@EE {
+			reg = <0xEE>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@EF {
+			reg = <0xEF>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@F0 {
+			reg = <0xF0>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@F1 {
+			reg = <0xF1>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@F2 {
+			reg = <0xF2>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@F3 {
+			reg = <0xF3>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@F4 {
+			reg = <0xF4>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@F5 {
+			reg = <0xF5>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@F6 {
+			reg = <0xF6>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@F7 {
+			reg = <0xF7>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@F8 {
+			reg = <0xF8>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@F9 {
+			reg = <0xF9>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@FA {
+			reg = <0xFA>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@FB {
+			reg = <0xFB>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@FC {
+			reg = <0xFC>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@FD {
+			reg = <0xFD>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@FE {
+			reg = <0xFE>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@FF {
+			reg = <0xFF>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@100 {
+			reg = <0x100>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@101 {
+			reg = <0x101>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@102 {
+			reg = <0x102>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@103 {
+			reg = <0x103>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@104 {
+			reg = <0x104>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@105 {
+			reg = <0x105>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@106 {
+			reg = <0x106>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@107 {
+			reg = <0x107>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@108 {
+			reg = <0x108>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@109 {
+			reg = <0x109>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@10A {
+			reg = <0x10A>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@10B {
+			reg = <0x10B>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@10C {
+			reg = <0x10C>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@10D {
+			reg = <0x10D>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@10E {
+			reg = <0x10E>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@10F {
+			reg = <0x10F>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@110 {
+			reg = <0x110>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@111 {
+			reg = <0x111>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@112 {
+			reg = <0x112>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@113 {
+			reg = <0x113>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@114 {
+			reg = <0x114>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@115 {
+			reg = <0x115>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@116 {
+			reg = <0x116>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@117 {
+			reg = <0x117>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@118 {
+			reg = <0x118>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@119 {
+			reg = <0x119>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@11A {
+			reg = <0x11A>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@11B {
+			reg = <0x11B>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@11C {
+			reg = <0x11C>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@11D {
+			reg = <0x11D>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@11E {
+			reg = <0x11E>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@11F {
+			reg = <0x11F>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@120 {
+			reg = <0x120>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@121 {
+			reg = <0x121>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@122 {
+			reg = <0x122>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@123 {
+			reg = <0x123>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@124 {
+			reg = <0x124>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@125 {
+			reg = <0x125>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@126 {
+			reg = <0x126>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@127 {
+			reg = <0x127>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@128 {
+			reg = <0x128>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@129 {
+			reg = <0x129>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@12A {
+			reg = <0x12A>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@12B {
+			reg = <0x12B>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@12C {
+			reg = <0x12C>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@12D {
+			reg = <0x12D>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@12E {
+			reg = <0x12E>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@12F {
+			reg = <0x12F>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@130 {
+			reg = <0x130>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@131 {
+			reg = <0x131>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@132 {
+			reg = <0x132>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@133 {
+			reg = <0x133>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@134 {
+			reg = <0x134>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@135 {
+			reg = <0x135>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@136 {
+			reg = <0x136>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@137 {
+			reg = <0x137>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@138 {
+			reg = <0x138>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@139 {
+			reg = <0x139>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@13A {
+			reg = <0x13A>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@13B {
+			reg = <0x13B>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@13C {
+			reg = <0x13C>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@13D {
+			reg = <0x13D>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@13E {
+			reg = <0x13E>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@13F {
+			reg = <0x13F>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@140 {
+			reg = <0x140>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@141 {
+			reg = <0x141>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@142 {
+			reg = <0x142>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@143 {
+			reg = <0x143>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@144 {
+			reg = <0x144>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@145 {
+			reg = <0x145>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@146 {
+			reg = <0x146>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@147 {
+			reg = <0x147>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@148 {
+			reg = <0x148>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@149 {
+			reg = <0x149>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@14A {
+			reg = <0x14A>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@14B {
+			reg = <0x14B>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@14C {
+			reg = <0x14C>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@14D {
+			reg = <0x14D>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@14E {
+			reg = <0x14E>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@14F {
+			reg = <0x14F>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@150 {
+			reg = <0x150>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@151 {
+			reg = <0x151>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@152 {
+			reg = <0x152>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@153 {
+			reg = <0x153>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@154 {
+			reg = <0x154>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@155 {
+			reg = <0x155>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@156 {
+			reg = <0x156>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@157 {
+			reg = <0x157>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@158 {
+			reg = <0x158>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@159 {
+			reg = <0x159>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@15A {
+			reg = <0x15A>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@15B {
+			reg = <0x15B>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@15C {
+			reg = <0x15C>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@15D {
+			reg = <0x15D>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@15E {
+			reg = <0x15E>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@15F {
+			reg = <0x15F>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@160 {
+			reg = <0x160>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@161 {
+			reg = <0x161>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@162 {
+			reg = <0x162>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@163 {
+			reg = <0x163>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@164 {
+			reg = <0x164>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@165 {
+			reg = <0x165>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@166 {
+			reg = <0x166>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@167 {
+			reg = <0x167>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@168 {
+			reg = <0x168>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@169 {
+			reg = <0x169>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@16A {
+			reg = <0x16A>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@16B {
+			reg = <0x16B>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@16C {
+			reg = <0x16C>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@16D {
+			reg = <0x16D>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@16E {
+			reg = <0x16E>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@16F {
+			reg = <0x16F>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@170 {
+			reg = <0x170>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@171 {
+			reg = <0x171>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@172 {
+			reg = <0x172>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@173 {
+			reg = <0x173>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@174 {
+			reg = <0x174>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@175 {
+			reg = <0x175>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@176 {
+			reg = <0x176>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@177 {
+			reg = <0x177>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@178 {
+			reg = <0x178>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@179 {
+			reg = <0x179>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@17A {
+			reg = <0x17A>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@17B {
+			reg = <0x17B>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@17C {
+			reg = <0x17C>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@17D {
+			reg = <0x17D>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@17E {
+			reg = <0x17E>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@17F {
+			reg = <0x17F>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@180 {
+			reg = <0x180>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@181 {
+			reg = <0x181>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@182 {
+			reg = <0x182>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@183 {
+			reg = <0x183>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@184 {
+			reg = <0x184>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@185 {
+			reg = <0x185>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@186 {
+			reg = <0x186>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@187 {
+			reg = <0x187>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@188 {
+			reg = <0x188>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@189 {
+			reg = <0x189>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@18A {
+			reg = <0x18A>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@18B {
+			reg = <0x18B>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@18C {
+			reg = <0x18C>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@18D {
+			reg = <0x18D>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@18E {
+			reg = <0x18E>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@18F {
+			reg = <0x18F>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
+
+		multi-led@190 {
+			reg = <0x190>;
+			color = <LED_COLOR_ID_RGB>;
+			function = LED_FUNCTION_STATUS;
+		};
 };
