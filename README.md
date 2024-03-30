@@ -9,7 +9,7 @@ This is the base Nerves System configuration for [ConeRGB V3](https://github.com
 
 | Feature              | Description                     |
 | -------------------- | ------------------------------- |
-| CPU                  | 1.2 GHz ARM Cortex-A7 Dual-Cor  |
+| CPU                  | 1.2 GHz ARM Cortex-A7 Dual-Core |
 | Memory               | 128 MB DDR3                     |
 | Storage              | MicroSD                         |
 | Linux kernel         | 6.1 w/ patches                  |
