@@ -20,6 +20,7 @@
 		mmc0 = &mmc0;
 		serial0 = &uart0;
 		serial1 = &uart1;
+		ethernet0 = &rtl8189ftv;
 	};
 
 	chosen {
@@ -136,7 +137,7 @@
 
 	wifi_pwrseq: wifi-pwrseq {
 		compatible = "mmc-pwrseq-simple";
-		reset-gpios = <&pio 6 12 GPIO_ACTIVE_HIGH>; /* PG12 */
+		reset-gpios = <&pio 6 12 GPIO_ACTIVE_LOW>; /* PG12 */
 		post-power-on-delay-ms = <200>;
 	};
 };
@@ -235,6 +236,7 @@
 		"PG15";
 
 	vcc-pb-supply = <&reg_3v3>;
+	vcc-pc-supply = <&reg_3v3>;
 	vcc-pd-supply = <&reg_3v3>;
 	vcc-pe-supply = <&reg_3v3>;
 	vcc-pf-supply = <&reg_3v3>;
@@ -296,6 +298,11 @@
 		pins = "PE5";
 		function = "ledc";
 	};
+
+	spi0_cs0_pc_pin: spi0-cs0-pc-pin {
+		pins = "PC3";
+		function = "spi0";
+	};
 };
 
 &pwm {
@@ -326,6 +333,14 @@
 	pinctrl-0 = <&uart1_pg6_pins>, <&uart1_pg8_rts_cts_pins>;
 	pinctrl-names = "default";
 	status = "okay";
+	bluetooth {
+		compatible = "realtek,rtl8723bs-bt";
+		device-wake-gpios = <&pio 6 13 GPIO_ACTIVE_HIGH>; /* PG13 */
+		host-wake-gpios =  <&pio 6 14 GPIO_ACTIVE_HIGH>; /* PG14 */
+		enable-gpios = <&pio 6 15 GPIO_ACTIVE_HIGH>; /* PG15 */
+		max-speed = <1500000>;
+		status = "okay";
+	};
 };
 
 &i2c2 {
@@ -360,20 +375,20 @@
 	 * Explicitly define the sdio device, so that we can add an ethernet
 	 * alias for it (which e.g. makes u-boot set a mac-address).
 	 */
-	brcm4329: sdio_wifi@1 {
+	// brcm4329: sdio_wifi@1 {
+	// 	reg = <1>;
+	// 	compatible = "brcm,bcm4329-fmac";
+	// 	interrupt-parent = <&pio>;
+	// 	interrupts = <6 10 IRQ_TYPE_LEVEL_LOW>; /* PG10 = WL_WAKE_AP */
+	// 	interrupt-names = "host-wake";
+	// };
+
+	rtl8189ftv: wifi@1 {
 		reg = <1>;
-		compatible = "brcm,bcm4329-fmac";
 		interrupt-parent = <&pio>;
 		interrupts = <6 10 IRQ_TYPE_LEVEL_LOW>; /* PG10 = WL_WAKE_AP */
 		interrupt-names = "host-wake";
 	};
-
-	//rtl8189ftv: wifi@1 {
-	//	reg = <1>;
-	//	interrupt-parent = <&pio>;
-	//	interrupts = <6 10 IRQ_TYPE_LEVEL_LOW>; /* PG10 = WL_WAKE_AP */
-	//	interrupt-names = "host-wake";
-	//};
 };
 
 /* The USB-C socket has its CC pins pulled to GND, so is hardwired as a UFP. */
@@ -395,10 +410,52 @@
 	status = "okay";
 };
 
-&can1 {
+&can0 {
 	pinctrl-names = "default";
-	pinctrl-0 = <&can1_pins>;
+	pinctrl-0 = <&can0_pins>;
 	status = "okay";
 };
 
-// #include "sun8i-t113-ledc.dtsi"
+&spi0 {
+	pinctrl-0 = <&spi0_pins>, <&spi0_cs0_pc_pin>;
+	pinctrl-names = "default";
+	status = "disabled";
+
+	flash@0 {
+		// compatible = "everspin,mr25h40", "jedec,spi-nor";
+		compatible = "winbond,w25q32", "jedec,spi-nor";
+		reg = <0>;
+		spi-max-frequency = <4000000>;
+		status = "disabled";
+
+		partitions {
+			compatible = "fixed-partitions";
+			#address-cells = <1>;
+			#size-cells = <1>;
+
+			partition@0 {
+				label = "data";
+				reg = <0x0 0x80000>;
+				// reg = <0x0 0x400000>;
+			};
+		};
+	};
+};
+
+&mixer0 {
+	status = "disabled";
+};
+
+&tcon_top {
+	status = "disabled";
+};
+
+&tcon_lcd0 {
+	status = "disabled";
+};
+
+&crypto {
+	status = "okay";
+};
+
+#include "sun8i-t113-ledc.dtsi"

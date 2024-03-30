@@ -1,16 +1,7 @@
 &ledc {
-	pinctrl-0 = <&ledc_pe5_pin>;
-	pinctrl-names = "default";
-	reg = <0x2008000 0x14>;
-	status = "okay";
-	allwinner,pixel-format = "grb";
-	allwinner,t0h-ns = "320";
-	allwinner,t0l-ns = "800";
-	allwinner,t1h-ns = "840";
-	allwinner,t1l-ns = "400";
-	allwinner,treset-ns = "300000";
 <%= for i <- 0..300 do %>
 	multi-led@<%= String.trim(inspect(i, base: :hex), "0x") %> {
+		label = "pixel_<%= i %>";
 		reg = <<%= inspect(i, base: :hex) %>>;
 		color = <LED_COLOR_ID_RGB>;
 		function = LED_FUNCTION_STATUS;
