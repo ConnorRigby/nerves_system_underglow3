@@ -12,6 +12,16 @@ follows:
    releases, and Linux kernel updates. They're also made to fix bugs and add
    features to the build infrastructure.
 
+
+## v0.2.0
+
+Second prototype Bringup release
+
+* Enable ledc
+* Enable temporary rtl wifi driver
+* Enable kernel bluetooth
+* Enable ipv6
+
 ## v0.1.0
 
 This is the initial release.
