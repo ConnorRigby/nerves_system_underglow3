@@ -1,0 +1,30 @@
+From 0b292ff098002cb9bd6b5fcc74a330372c972925 Mon Sep 17 00:00:00 2001
+From: Connor Rigby <connorr@hey.com>
+Date: Mon, 15 Jul 2024 07:24:51 -0600
+Subject: [PATCH] Remove dependency on Rust
+
+Signed-off-by: Connor Rigby <connorr@hey.com>
+---
+ pyproject.toml   | 2 +-
+ requirements.txt | 2 --
+ 2 files changed, 1 insertion(+), 3 deletions(-)
+
+diff --git a/pyproject.toml b/pyproject.toml
+index 31ffe04..d1e6ae6 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -1,2 +1,2 @@
+ [build-system]
+-requires = ["setuptools", "wheel", "setuptools-rust"]
++requires = ["setuptools", "wheel"]
+diff --git a/requirements.txt b/requirements.txt
+index 56e8ff9..bc05a8a 100644
+--- a/requirements.txt
++++ b/requirements.txt
+@@ -1,3 +1 @@
+-# Setup/Rust build requires
+-setuptools_rust>=0.10.5
+ semantic_version>=2.6.0
+-- 
+2.34.1
+

@@ -1,0 +1,6 @@
+config BR2_PACKAGE_PYTHON_PYRLANG_TERM
+	bool "python-pyrlang-term"
+	help
+	  Erlang Term support and External Term format codec library
+
+	  https://github.com/Pyrlang/Term

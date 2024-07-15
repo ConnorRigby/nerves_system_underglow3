@@ -20,6 +20,7 @@
 		mmc0 = &mmc0;
 		serial0 = &uart0;
 		serial1 = &uart1;
+		ethernet0 = &rtl8189ftv;
 	};
 
 	chosen {
@@ -52,9 +53,22 @@
 		regulator-max-microvolt = <880000>;
 		vin-supply = <&reg_vcc5v>;
 	};
+
+	reg_usb: regulator-usb {
+		compatible = "regulator-fixed";
+		regulator-name = "vbus-5v";
+		regulator-min-microvolt = <5000000>;
+		regulator-max-microvolt = <5000000>;
+		gpio = <&pio 1 4 GPIO_ACTIVE_LOW>; /* PB4 */
+		startup-delay-us = <1000000>; /* 1 second */
+		off-on-delay-us = <1000000>; /* 1 second */
+		enable-active-low;
+	};
+
 	wifi_pwrseq: wifi-pwrseq {
 		compatible = "mmc-pwrseq-simple";
 		reset-gpios = <&pio 6 12 GPIO_ACTIVE_LOW>; /* PG12 */
+		post-power-on-delay-ms = <200>;
 	};
 };
 
@@ -78,6 +92,7 @@
 
 &pio {
 	vcc-pb-supply = <&reg_3v3>;
+	vcc-pc-supply = <&reg_3v3>;
 	vcc-pd-supply = <&reg_3v3>;
 	vcc-pe-supply = <&reg_3v3>;
 	vcc-pf-supply = <&reg_3v3>;
@@ -92,6 +107,58 @@
 		pins = "PE12", "PE13";
 		function = "i2c2";
 	};
+
+	pwm0_pd16_pins: pwm0-pd16-pins {
+		pins = "PD16";
+		function = "pwm0";
+	};
+
+	pwm1_pd17_pins: pwm1-pd16-pins {
+		pins = "PD17";
+		function = "pwm1";
+	};
+
+	pwm2_pd18_pins: pwm2-pd18-pins {
+		pins = "PD18";
+		function = "pwm2";
+	};
+
+	pwm3_pd19_pins: pwm2-pd19-pins {
+		pins = "PD19";
+		function = "pwm3";
+	};
+
+	pwm4_pd20_pins: pwm4-pd20-pins {
+		pins = "PD20";
+		function = "pwm4";
+	};
+
+	/omit-if-no-ref/
+	pwm5_pd21_pins: pwm5-pd21-pins {
+		pins = "PD21";
+		function = "pwm5";
+	};
+
+	pwm6_pd9_pins: pwm6-pd9-pins {
+		pins = "PD9";
+		function = "pwm6";
+	};
+
+	/omit-if-no-ref/
+	pwm7_pd22_pins: pwm7-pd22-pins {
+		pins = "PD22";
+		function = "pwm7";
+	};
+
+	ledc_pe5_pin: ledc-pe5-pin {
+		pins = "PE5";
+		function = "ledc";
+	};
+
+	spi0_cs0_pc_pin: spi0-cs0-pc-pin {
+		pins = "PC3";
+		function = "spi0";
+	};
 };
 
 &uart0 {
@@ -105,6 +172,15 @@
 	pinctrl-0 = <&uart1_pg6_pins>, <&uart1_pg8_rts_cts_pins>;
 	pinctrl-names = "default";
 	status = "okay";
+
+	bluetooth {
+		compatible = "realtek,rtl8723bs-bt";
+		device-wake-gpios = <&pio 6 13 GPIO_ACTIVE_HIGH>; /* PG13 */
+		host-wake-gpios =  <&pio 6 14 GPIO_ACTIVE_HIGH>; /* PG14 */
+		enable-gpios = <&pio 6 15 GPIO_ACTIVE_HIGH>; /* PG15 */
+		max-speed = <1500000>;
+		status = "okay";
+	};
 };
 
 &i2c2 {
@@ -127,10 +203,12 @@
 &mmc1 {
 	pinctrl-0 = <&mmc1_pins>;
 	pinctrl-names = "default";
+
+	/* SDIO to WiFi module */
 	vmmc-supply = <&reg_3v3>;
-	non-removable;
-	bus-width = <4>;
 	mmc-pwrseq = <&wifi_pwrseq>;
+	bus-width = <4>;
+	non-removable;
 	status = "okay";
 
 	rtl8189ftv: wifi@1 {
@@ -141,18 +219,13 @@
 	};
 };
 
-/* The USB-C socket has its CC pins pulled to GND, so is hardwired as a UFP. */
 &usb_otg {
 	dr_mode = "peripheral";
 	status = "okay";
 };
 
 &usbphy {
-	usb1_vbus-supply = <&reg_vcc5v>;
-	status = "okay";
-};
-
-&ehci0 {
+	usb1_vbus-supply = <&reg_usb>;
 	status = "okay";
 };
 
@@ -160,16 +233,32 @@
 	status = "okay";
 };
 
-&ohci0 {
-	status = "okay";
-};
-
 &ohci1 {
 	status = "okay";
 };
 
-&can1 {
+&can0 {
 	pinctrl-names = "default";
-	pinctrl-0 = <&can1_pins>;
+	pinctrl-0 = <&can0_pins>;
+	status = "okay";
+};
+
+&spi0 {
+	status = "disabled";
+};
+
+&mixer0 {
+	status = "disabled";
+};
+
+&tcon_top {
+	status = "disabled";
+};
+
+&tcon_lcd0 {
+	status = "disabled";
+};
+
+&crypto {
 	status = "okay";
 };

@@ -1,2 +1,4 @@
 # Add project-specific packages for Buildroot here
 
+source "$NERVES_DEFCONFIG_DIR/package/python-pyrlang-term/Config.in"
+source "$NERVES_DEFCONFIG_DIR/package/python-pyrlang/Config.in"

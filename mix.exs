@@ -55,7 +55,7 @@ defmodule NervesSystemUnderglow3.MixProject do
       # llvm-based tooling that may need more precise processor information.
       env: [
         {"TARGET_ARCH", "arm"},
-        {"TARGET_CPU", "cortex_a53"},
+        {"TARGET_CPU", "cortex_a7"},
         {"TARGET_OS", "linux"},
         {"TARGET_ABI", "gnueabihf"},
         {"TARGET_GCC_FLAGS",

@@ -1,0 +1,27 @@
+From 3b162243103b8f73408eb09ba23be7e475f58ae9 Mon Sep 17 00:00:00 2001
+From: Connor Rigby <connorr@hey.com>
+Date: Mon, 1 Jul 2024 12:36:51 -0600
+Subject: [PATCH] Set bluetoothd storage directory
+
+Signed-off-by: Connor Rigby <connorr@hey.com>
+---
+ package/bluez5_utils/bluez5_utils.mk | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/package/bluez5_utils/bluez5_utils.mk b/package/bluez5_utils/bluez5_utils.mk
+index 3ccb63948c..9eff279022 100644
+--- a/package/bluez5_utils/bluez5_utils.mk
++++ b/package/bluez5_utils/bluez5_utils.mk
+@@ -27,7 +27,8 @@ BLUEZ5_UTILS_CONF_OPTS = \
+ 	--disable-lsan \
+ 	--disable-ubsan \
+ 	--disable-pie \
+-	--with-dbusconfdir=/etc
++	--with-dbusconfdir=/etc \
++	--localstatedir=/data/bluetooth
+ 
+ ifeq ($(BR2_PACKAGE_BLUEZ5_UTILS_OBEX),y)
+ BLUEZ5_UTILS_CONF_OPTS += --enable-obex
+-- 
+2.34.1
+
