@@ -13,4 +13,4 @@ ln -sf ops.fw $TARGET_DIR/usr/share/fwup/revert.fw
 cp -rf $NERVES_DEFCONFIG_DIR/fwup_include $BINARIES_DIR
 
 # Copy bluetoothd config file
-cp -rf $BUILD_DIR/bluez5_utils-5.75/src/bluetooth.conf $TARGET_DIR/etc/dbus-1/system.d/
+cp -rf $BUILD_DIR/bluez5_utils-5.76/src/bluetooth.conf $TARGET_DIR/etc/dbus-1/system.d/

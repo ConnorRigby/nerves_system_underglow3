@@ -1,0 +1,111 @@
+From 9a6becbc8e3fdf354200018c72205f0bede437c3 Mon Sep 17 00:00:00 2001
+From: Connor Rigby <connorr@hey.com>
+Date: Mon, 15 Jul 2024 08:38:23 -0600
+Subject: [PATCH] package/{bluez5_utils, bluez5_utils-headers}: bump to version
+ 5.76
+
+Bump to version 5.76 containing various fixes.
+
+Changelog:
+https://git.kernel.org/pub/scm/bluetooth/bluez.git/tree/ChangeLog
+
+Signed-off-by: Connor Rigby <connorr@hey.com>
+---
+ .../bluez5_utils-headers.mk                   |  2 +-
+ ...-sixaxis-build-without-tools.patch.disable | 35 +++++++++++++++++++
+ package/bluez5_utils/bluez5_utils.hash        |  2 +-
+ package/bluez5_utils/bluez5_utils.mk          |  5 +--
+ 4 files changed, 40 insertions(+), 4 deletions(-)
+ create mode 100644 package/bluez5_utils/0002-configure.ac-fix-sixaxis-build-without-tools.patch.disable
+
+diff --git a/package/bluez5_utils-headers/bluez5_utils-headers.mk b/package/bluez5_utils-headers/bluez5_utils-headers.mk
+index 2f07a7b422..69fe338503 100644
+--- a/package/bluez5_utils-headers/bluez5_utils-headers.mk
++++ b/package/bluez5_utils-headers/bluez5_utils-headers.mk
+@@ -5,7 +5,7 @@
+ ################################################################################
+ 
+ # Keep the version and patches in sync with bluez5_utils
+-BLUEZ5_UTILS_HEADERS_VERSION = 5.75
++BLUEZ5_UTILS_HEADERS_VERSION = 5.76
+ BLUEZ5_UTILS_HEADERS_SOURCE = bluez-$(BLUEZ5_UTILS_VERSION).tar.xz
+ BLUEZ5_UTILS_HEADERS_SITE = $(BR2_KERNEL_MIRROR)/linux/bluetooth
+ BLUEZ5_UTILS_HEADERS_DL_SUBDIR = bluez5_utils
+diff --git a/package/bluez5_utils/0002-configure.ac-fix-sixaxis-build-without-tools.patch.disable b/package/bluez5_utils/0002-configure.ac-fix-sixaxis-build-without-tools.patch.disable
+new file mode 100644
+index 0000000000..1e0e34cb8f
+--- /dev/null
++++ b/package/bluez5_utils/0002-configure.ac-fix-sixaxis-build-without-tools.patch.disable
+@@ -0,0 +1,35 @@
++From f4795bf64dbf8778fc765b7dad1b1bfb365b48d7 Mon Sep 17 00:00:00 2001
++From: Fabrice Fontaine <fontaine.fabrice@gmail.com>
++Date: Wed, 8 May 2024 19:54:16 +0200
++Subject: configure.ac: fix sixaxis build without tools
++
++Fix the following build failure with --enable-sixaxis --enable-udev
++--disable-tools raised since version 5.73 and
++9f71892b63f6b65dab874a633d88ae2dcad93a16:
++
++sixaxis.c:(.text.sixaxis_init+0x23): undefined reference to `udev_new'
++
++Fixes: http://autobuild.buildroot.org/results/c337d0f473c5fbb3e6cda1317ba06f5e2b16a43e
++
++Upstream: https://git.kernel.org/pub/scm/bluetooth/bluez.git/commit/?id=f4795bf64dbf8778fc765b7dad1b1bfb365b48d7
++Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
++---
++ configure.ac | 2 +-
++ 1 file changed, 1 insertion(+), 1 deletion(-)
++
++diff --git a/configure.ac b/configure.ac
++index 9dea70ddc1..8b3cdb4e8f 100644
++--- a/configure.ac
+++++ b/configure.ac
++@@ -226,7 +226,7 @@ AM_CONDITIONAL(MONITOR, test "${enable_monitor}" != "no")
++ 
++ AC_ARG_ENABLE(udev, AS_HELP_STRING([--disable-udev],
++ 		[disable udev device support]), [enable_udev=${enableval}])
++-if (test "${enable_tools}" != "no" && test "${enable_udev}" != "no"); then
+++if (test "${enable_udev}" != "no"); then
++ 	PKG_CHECK_MODULES(UDEV, libudev >= 196)
++ 	AC_DEFINE(HAVE_UDEV, 1, [Define to 1 if udev is required])
++ fi
++-- 
++cgit 1.2.3-korg
++
+diff --git a/package/bluez5_utils/bluez5_utils.hash b/package/bluez5_utils/bluez5_utils.hash
+index 9cc19f87dd..c9dfdc3788 100644
+--- a/package/bluez5_utils/bluez5_utils.hash
++++ b/package/bluez5_utils/bluez5_utils.hash
+@@ -1,5 +1,5 @@
+ # From https://www.kernel.org/pub/linux/bluetooth/sha256sums.asc:
+-sha256  988cb3c4551f6e3a667708a578f5ca9f93fc896508f98f08709be4f8ab033c2f  bluez-5.75.tar.xz
++sha256  55e2c645909ad82d833c42ce85ec20434e0ef0070941b1eab73facdd240bbd63  bluez-5.76.tar.xz
+ # Locally computed
+ sha256  b499eddebda05a8859e32b820a64577d91f1de2b52efa2a1575a2cb4000bc259  COPYING
+ sha256  ec60b993835e2c6b79e6d9226345f4e614e686eb57dc13b6420c15a33a8996e5  COPYING.LIB
+diff --git a/package/bluez5_utils/bluez5_utils.mk b/package/bluez5_utils/bluez5_utils.mk
+index da10f95a05..3400a17718 100644
+--- a/package/bluez5_utils/bluez5_utils.mk
++++ b/package/bluez5_utils/bluez5_utils.mk
+@@ -5,7 +5,7 @@
+ ################################################################################
+ 
+ # Keep the version and patches in sync with bluez5_utils-headers
+-BLUEZ5_UTILS_VERSION = 5.75
++BLUEZ5_UTILS_VERSION = 5.76
+ BLUEZ5_UTILS_SOURCE = bluez-$(BLUEZ5_UTILS_VERSION).tar.xz
+ BLUEZ5_UTILS_SITE = $(BR2_KERNEL_MIRROR)/linux/bluetooth
+ # 0001-configure.ac-Fix-disable-cups.patch
+@@ -31,7 +31,8 @@ BLUEZ5_UTILS_CONF_OPTS = \
+ 	--disable-lsan \
+ 	--disable-ubsan \
+ 	--disable-pie \
+-	--with-dbusconfdir=/etc
++	--with-dbusconfdir=/etc \
++	--localstatedir=/data/bluetooth
+ 
+ ifeq ($(BR2_PACKAGE_BLUEZ5_UTILS_OBEX),y)
+ BLUEZ5_UTILS_CONF_OPTS += --enable-obex
+-- 
+2.34.1
+
